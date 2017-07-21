@@ -1,0 +1,198 @@
+.default_form {
+  width: 100%;
+  //margin-left:10%;
+  padding:0!important;
+  margin:0!important;
+  display: block;
+  position: relative;
+  background: #FFFFFF;
+
+  .submit_files {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+
+    h4 {
+      .Font_Body;
+      font-size: 25px;
+      color: fade(@gray,50%);
+
+      .completed {
+        color: darken(@color-success-2,30%);
+      }
+    }
+  }
+
+  .submit_contact {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+
+    h4 {
+      .Font_Body;
+      font-size: 25px;
+      color: fade(@gray,50%);
+
+      .completed {
+        color: darken(@color-success-2,30%);
+      }
+    }
+
+    .progress {
+      width: 70%;
+      margin-left: 13%;
+    }
+  }
+
+  .body {
+    width: 100%;
+    //height:200px;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+
+    .input {
+      min-height: 100px;
+      border: 1px solid #E4E4E4;
+      margin-right: -1px;
+      margin-bottom: -1px;
+      padding: 20px 20px 20px 25px;
+      font-family: Source Sans Pro, Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #939393;
+      &.fixed{
+        height:112px;
+      }
+      .title {
+        font-size: 18px;
+      }
+      .description{
+        font-weight: 200;
+      }
+      input {
+        border: none;
+        margin-top: 5px;
+        font-weight: 200;
+        transition: opacity 0.3s, box-shadow 0.3s;
+        outline: none;
+        height: 40px;
+        width: 100%;
+
+        &:focus {
+          .BoxShadowHelper(2);
+          //box-shadow: 0 3px 4px rgba(0, 0, 0, .15);
+          background-color: @gray-lighter;
+          padding: 10px;
+          z-index: 20;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .fileInput {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .fileInput + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: @color-primary-0;
+    padding: 5px;
+    .BoxShadowHelper(1);
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    /* "hand" cursor */
+    border-radius: 2px;
+  }
+
+  .fileInput + label:hover,
+  .fileInput:focus + label {
+    background-color: darken(@color-primary-0,10%);
+  }
+
+  .inputfile + label * {
+    pointer-events: none;
+  }
+
+  .submit {
+    height: 50px;
+    width: 100%;
+    margin:0!important;
+    border-radius:0;
+    background-color: @color-secondary-2-3;
+    border-color: darken(@color-secondary-2-3,40%);
+    //margin-bottom:200px;
+    padding: 5px;
+    display: block;
+    position: relative;
+
+    .buttons {
+      .center.both;
+    }
+
+    .next {
+      .Font_Body;
+      width: 100px;
+      background-color: fade(@color-success-2,80%);
+      border-color: @color-success-2;
+      height: 100%;
+      .BoxShadowHelper(1);
+      vertical-align: middle;
+      font-size: 20px;
+      color: darken(@color-success-2,30%);
+      //line-height: 100%;
+    }
+
+    .previous {
+      .Font_Body;
+      width: 100px;
+      background-color: fade(@color-secondary-2-2,80%);
+      border-color: @color-secondary-2-2;
+      height: 100%;
+      .BoxShadowHelper(1);
+      vertical-align: middle;
+      font-size: 20px;
+      color: darken(@color-secondary-2-2,50%);
+      //line-height: 100%;
+    }
+  }
+
+  .drop_text {
+    text-align: center;
+    .center.both;
+    font-size: 20px;
+    color: fade(black,40%);
+
+    i {
+      font-size: 40px;
+    }
+  }
+
+  .another-file-over-class {
+    //background-color: blue;
+  }
+
+  .check {
+    .center.both;
+    .Font_Body;
+    text-align: center;
+    font-size: 40px;
+    color: fade(@gray,50%);
+
+    i {
+      font-size: 150px;
+      margin-bottom: 0;
+    }
+  }
+}

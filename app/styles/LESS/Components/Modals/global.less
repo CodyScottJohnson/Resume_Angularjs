@@ -1,0 +1,79 @@
+.notification_modal{
+
+.modal-content{
+  background:none;
+  border:none;
+  box-shadow: none;
+};
+.panel{
+  width:100%;
+  height:400px;
+  .BoxShadowHelperUp(1);
+  &.left{
+    left:20px;
+    top:30px;
+  };
+  &.right{
+    left:10px;
+    top:40px;
+  };
+  &.center{
+    top:50px;
+  };
+}
+.color_test{
+  .panel-heading{
+    background-color: @color-primary-1;
+    .BoxShadowHelper(1);
+  }
+  .btn-success{
+    width:200px;
+    border-radius:0px;
+    background-color: @color-success-1;
+    color:darken(@color-success-1,60%);
+
+  }
+  .btn-warning{
+    width:200px;
+    border-radius:0px;
+    background-color: @color-complement-1;
+    color:darken(@color-complement-1,60%);
+  }
+}
+}
+.modal-header{
+  .Font_Body;
+  font-size:20px;
+}
+.modal_save{
+  .clickable;
+  .Font_Body;
+  .BoxShadowHelperUp(5);
+  font-size:20px;
+  text-align: center;
+  background-color: @color-primary-2;
+  color:darken(@color-primary-2,50%);
+  border-radius: 0 0 5px 5px;
+}
+
+.modal-panel{
+  .Font_Body;
+  color:darken(@color-primary-2,50%);
+  font-size:30px;
+  display: block;
+  position: relative;
+  padding:30px;
+
+}
+.modal-body{
+  .success{
+    text-align: center;
+    .Font_Body;
+    font-size: 30px;
+    i{
+      color:@color-success-2!important;
+      font-size: 120px;
+    }
+
+  }
+}
