@@ -41,7 +41,14 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider, loc
   })
     .state('app.Main', {
       url: '/',
-      templateUrl: 'views/Pages/resume.html',
+      templateUrl: 'views/Pages/Landing.html',
+      data: {
+        requireLogin: false
+      }
+    })
+    .state('app.Resume', {
+      url: '/Resume',
+      templateUrl: 'views/Pages/Landing.html',
       data: {
         requireLogin: false
       }
