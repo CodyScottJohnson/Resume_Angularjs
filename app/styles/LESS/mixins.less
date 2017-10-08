@@ -92,7 +92,7 @@
     height: 5px;
   };
   &::-webkit-scrollbar-thumb {
-    background: rgba(95, 150, 191,.3);
+    background: @tech;
     border-radius: 20px;
   };
   &::-webkit-scrollbar-track {
@@ -104,6 +104,9 @@
   &:hover {
     cursor: pointer;
   };
+}
+.background-new(@fade: 100%){
+  background-image:linear-gradient(-45deg, fade(@tech,@fade) 0%, fade(@color-button,@fade) 100%);
 }
 .background(@fade: 100%){
   background-image: linear-gradient(-127deg, fade(#E3E3E3,@fade) 0%, fade(#9AD3DE,@fade) 48%, fade(#89BDD3,@fade) 94%);
