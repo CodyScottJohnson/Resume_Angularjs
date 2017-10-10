@@ -19,8 +19,14 @@
     <!-- endbuild -->
   </head>
   <body ng-app="Resume">
+    <div class="modal_backdrop" ng-show="modals.length > 0">
+        <div ng-include="'views/Modals/job.html'">
+
+        </div>
+    </div>
 			<div class="mainView" ui-view resize style="width:100%;height:{{windowHeight}}px;">
 			</div>
+
 		<!--<div ng-view style="display:inline-block;position:relative;top:60px;left:250px;min-width:90%" ng-class="{reposition: (SideBarVis == one)}"></div>-->
 		</div>
     <!-- build:js(.) scripts/vendor.js -->
@@ -37,6 +43,8 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/materialize/bin/materialize.js"></script>
     <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+    <script src="bower_components/matchmedia/matchMedia.js"></script>
+    <script src="bower_components/ngSticky/lib/sticky.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -45,6 +53,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/resize.js"></script>
         <script src="scripts/filters/date.js"></script>
+        <script src="scripts/controllers/modal.js"></script>
         <!-- endbuild -->
 </body>
 </html>

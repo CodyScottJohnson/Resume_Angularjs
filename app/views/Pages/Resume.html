@@ -1,4 +1,4 @@
-<div class="view resume">
+<div class="resume" id="resume-container">
   <div class="header">
     <div class="logo">
       <img src="images/Logo.png" />
@@ -6,16 +6,43 @@
   </div>
   <div class="main">
     <div class="row">
-      <div class="col m4 l3 profile">
-        <div class="card">
-          <div class
-          <div class="download">
-            Download Resume
+      <div class="col s12 m4 l3 profile" >
+        <div class="card" sticky offset="10" media-query="min-width: 768px">
+          <div class="intro">
+            <div class="profile-img">
+              <img src="images/profile.jpg" />
+            </div>
+            <div class="name">
+              Cody Johnson
+              <div class="subtitle">
+                Data Scientist | MBA Candidate | Connecting Business and Statistics
+              </div>
+              <div class="local">
+                Provo, UT
+              </div>
+            </div>
+
           </div>
+          <div class="contact">
+            <div class="detail">
+              <i class="fa fa-envelope"></i> cody.s.johnson@utah.edu
+            </div>
+            <div class="detail">
+              <i class="fa fa-phone"></i> +1 (801) 721-2837
+            </div>
+            <div class="detail">
+              <a href="https://www.linkedin.com/in/codyscottjohnson/"><i class="fa fa-linkedin"></i> linkedin.com/in/codyscottjohnson/</a>
+            </div>
+          </div>
+          <a class="download" tabindex="1" href="/files/Cody_Johnson_Resume.pdf" download>
+            Download Resume
+          </a>
         </div>
       </div>
-      <div class="col m8 l9">
+      <div class="col s12 m8 l8 resume_detail">
+        <div ng-include="'/views/Pages/Resume_Details.html'">
 
+        </div>
       </div>
     </div>
   </div>

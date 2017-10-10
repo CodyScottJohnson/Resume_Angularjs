@@ -13,13 +13,16 @@ angular
     'LocalStorageModule',
     'ngAnimate',
     'ngCookies',
+    'sticky',
     'ui.materialize',
     'ui.router'
+
 
   ]);
 
 angular.module('Resume')
 .run(function($rootScope, $state, localStorageService) {
+  $rootScope.modals = [{url:"views/Modals/job.html"}];
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
     var requireLogin = toState.data.requireLogin;
   });
@@ -41,14 +44,14 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider, loc
   })
     .state('app.Main', {
       url: '/',
-      templateUrl: 'views/Pages/Landing.html',
+      templateUrl: 'views/Pages/Resume.html',
       data: {
         requireLogin: false
       }
     })
     .state('app.Resume', {
       url: '/Resume',
-      templateUrl: 'views/Pages/Landing.html',
+      templateUrl: 'views/Pages/Resume.html',
       data: {
         requireLogin: false
       }

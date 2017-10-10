@@ -1,5 +1,10 @@
 .center {
-  &.vertical {}
+  &.vertical {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+  }
   &.horizontal {
     position: absolute;
     left: 50%;
@@ -105,12 +110,62 @@
     cursor: pointer;
   };
 }
+
+@keyframes anim-effect-boris {
+	0% {
+		transform: scale3d(0.3, 0.3, 1);
+	}
+	25%, 50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+.click-pulse{
+  transition: all 0.4s ease-in;
+  span[class^='ion'] {
+    position: relative;
+  }
+  &:before {
+    content: '';
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0.001, 0.001);
+  }
+  &:focus {
+    outline: 0;
+    color: #fff;
+    &:before {
+      animation: effect_dylan 0.8s ease-out;
+    }
+  }
+}
+@keyframes effect_dylan {
+  50% {
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+  99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
+}
+
 .background-new(@fade: 100%){
   background-image:linear-gradient(-45deg, fade(@tech,@fade) 0%, fade(@color-button,@fade) 100%);
 }
 .background(@fade: 100%){
   background-image: linear-gradient(-127deg, fade(#E3E3E3,@fade) 0%, fade(#9AD3DE,@fade) 48%, fade(#89BDD3,@fade) 94%);
-}
-.background-new(@fade: 100%){
-  background-image:linear-gradient(-45deg, fade(@tech,@fade) 0%, fade(@color-button,@fade) 100%);
 }

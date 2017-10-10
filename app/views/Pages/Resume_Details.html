@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="title">
+    Summary
+  </div>
+  <div class="detail">
+    Experienced Data Analyst skilled in Statistics, Research, R, Python, and SQL. Looking to bridge the gap between
+analytical reasoning and business decision making.
+  </div>
+</div>
+<div class="card">
+  <div class="title">
+    Background
+  </div>
+  <div class="subtitle">
+    <i class="fa fa-briefcase"></i>Work Experience
+  </div>
+  <div class="detail">
+    <div class="job" ng-repeat="job in jobs">
+
+        <span class="years">{{job.years}}</span><br />
+        <span class="job_title">{{job.title}}
+        </span><br />
+        <span class="where">{{job.company}}</span><br />
+         <div class="read" ng-click="jobModal(job)">Read More</div>
+      <div class="logo">
+        <img src="/images/{{job.logo}}" />
+      </div>
+    </div>
+  </div>
+  <div class="subtitle">
+    <i class="fa fa-graduation-cap"></i>Education
+  </div>
+  <div class="detail">
+    <div class="school" ng-repeat="school in education">
+
+        <span class="years">{{school.years}}</span><br />
+        <span class="job_title">{{school.degree}}<span ng-show="school.majors" class="major">{{school.majors}}</span>
+      </span>
+        <span class="where">{{school.school}}</span><br />
+
+      <div class="logo">
+        <img src="/images/{{school.logo}}" />
+      </div>
+    </div>
+  </div>
+  <div class="subtitle">
+    <i class="fa fa-lightbulb-o"></i>Skills
+  </div>
+    <div class="detail">
+      <div class="skills">
+        <div class="skill" ng-repeat="skill in skills|orderBy:'-level'">
+          <div class="name">{{skill.name}}</div>
+          <div class="rank">
+            <div class="dot" ng-class="{active:skill.level>=1}"></div>
+            <div class="dot" ng-class="{active:skill.level>=2}"></div>
+            <div class="dot" ng-class="{active:skill.level>=3}"></div>
+            <div class="dot" ng-class="{active:skill.level>=4}"></div>
+            <div class="dot" ng-class="{active:skill.level>=5}"></div>
+            <div class="dot" ng-class="{active:skill.level>=6}"></div>
+            <div class="dot" ng-class="{active:skill.level>=7}"></div>
+            <div class="dot" ng-class="{active:skill.level>=8}"></div>
+            <div class="dot" ng-class="{active:skill.level>=9}"></div>
+            <div class="dot" ng-class="{active:skill.level>=10}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

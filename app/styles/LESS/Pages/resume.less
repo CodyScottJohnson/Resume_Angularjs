@@ -1,32 +1,345 @@
-.resume{
+.header {
+  width: 100%;
+  height: 80px;
+  background: white;
+  //position: absolute;
+  .BoxShadowHelper(1);
+
+  .logo {
+    height: 100%;
+    padding: 5px 30px;
+    border-right: 1px solid fade(@gray-pleasing,20%);
+    width:130px;
+    img {
+      height: 100%;
+    }
+  }
+}
+.resume {
   .background(30%);
-  .header{
-    width:100%;
+
+  .header {
+    width: 100%;
     height: 80px;
     background: white;
     .BoxShadowHelper(1);
-    .logo{
-      height:100%;
-      padding:5px 30px 5px 30px;
-      img{
-        height:100%;
-      }
-    }
-  }
-    .main{
-      width:100%;
-      display: block;
-      position: relative;
-    }
-    .profile{
-      display: block;
-      position: relative;
-      padding:20px;
-      .card{
-        background: green;
-        height:200px;
-        width:100%;
-      }
-    }
 
+    .logo {
+      height: 100%;
+      padding: 5px 30px;
+      border-right: 1px solid fade(@gray-pleasing,20%);
+      width:130px;
+      img {
+        height: 100%;
+      }
+    }
   }
+
+  .main {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .profile {
+    display: block;
+    position: relative;
+    padding: 20px;
+
+    .card {
+      background: white;
+      width: 100%;
+      border-radius: 5px;
+      padding: 0 0 50px !important;
+      display: block;
+      position: relative;
+
+      .intro {
+        padding: 20px;
+
+        .profile-img {
+          .background-new;
+          .BoxShadowHelper(1);
+          margin-left: auto;
+          margin-right: auto;
+          top: 30px;
+          width: 118px;
+          height: 118px;
+          padding: 4px;
+          border-radius: 100%;
+
+          img {
+            height: 110px;
+            width: 110px;
+            border-radius: 100%;
+          }
+        }
+
+        .name {
+          color: lighten(@gray-pleasing,20%);
+          margin-top: 15px;
+          font-size: 30px;
+          width: 100%;
+          text-align: center;
+
+          .subtitle {
+            color: fade(@gray-pleasing,55%);
+            font-size: 12px;
+          }
+          .local{
+            color: fade(@gray-pleasing,30%);
+            font-size: 12px;
+          }
+        }
+      }
+      .contact {
+        padding: 20px 20px 20px 20px;
+        width: 100%;
+        border-top: 1px solid fade(@gray-pleasing,20%);
+        //border-bottom: 1px solid fade(@gray-pleasing,50%);
+        margin: 0;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .detail {
+          margin: 10px;
+          color: fade(@gray-pleasing,50%);
+          vertical-align: middle;
+          line-height: 20px;
+
+
+          i {
+            font-size: 20px;
+            margin-right: 5px;
+            color: lighten(@gray-pleasing,20%);
+          }
+        }
+      }
+      .download {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: @almost-white;
+        font-weight: bolder;
+        text-transform: uppercase;
+        padding: 15px;
+        border-top: 1px solid fade(@gray-pleasing,20%);
+        .clickable;
+        .click-pulse;
+        .background-new(80%);
+
+        &:hover {
+          .background-new;
+        }
+      }
+    }
+  }
+  .resume_detail{
+      display: block;
+      position: relative;
+      padding: 20px;
+
+      .card {
+        background: white;
+        width: 100%;
+        height:100%;
+        border-radius: 5px;
+        //padding: 0 0 50px !important;
+        display: block;
+        position: relative;
+        .scrollbar;
+        .detail{
+          padding:20px;
+          width:100%;
+          font-size: 15px;
+          color:lighten(@gray-pleasing,30%);
+
+          .job{
+            background: white;
+            width:100%;
+            border-radius: 2px;
+            margin-bottom:15px;
+            .BoxShadowHelper(1);
+            border-left:8px solid @myColor;
+            position: relative;
+            display: block;
+            padding:10px 20px 10px 20px;
+            .years{
+              font-size: 12px;
+            //  margin:0px 0px 0px 5px;
+              //padding: 0px;
+              line-height: 12px;
+              //position: relative;
+              //display: block;
+            }
+            .job_title{
+              color:lighten(@gray-pleasing,20%);
+              //width:auto;
+              font-size: 25px;
+              line-height: 25px;
+              //position: relative;
+              //display: block;
+              //margin:0px;
+              //padding: 0px;
+            }
+            .where{
+              //margin:0px;
+              //padding: 0px;
+              line-height: 15px;
+              //position: relative;
+              //display: block;
+            }
+            .read{
+
+              display: inline-block;
+              font-size: 8px;
+              padding:5px 10px 5px 10px;
+              color:white;
+              background: @myColor;
+              border-radius: 10px;
+              .clickable
+            }
+            .logo{
+              height:70px;
+              .center.vertical;
+              right:20px;
+              img{
+                height:60px;
+              }
+
+            }
+            @media (max-width: 450px) {
+              .logo{
+              display: none;
+            }
+            }
+          }
+          .school{
+            background: white;
+            width:100%;
+            border-radius: 2px;
+            margin-bottom:15px;
+            .BoxShadowHelper(1);
+            border-left:8px solid @myColor;
+            position: relative;
+            display: block;
+            padding:10px 20px 10px 20px;
+            .years{
+              font-size: 12px;
+            //  margin:0px 0px 0px 5px;
+              //padding: 0px;
+              line-height: 12px;
+              //position: relative;
+              //display: block;
+            }
+            .job_title{
+              color:lighten(@gray-pleasing,20%);
+              //width:auto;
+              font-size: 25px;
+              line-height: 25px;
+              //position: relative;
+              display: block;
+              //margin:0px;
+              //padding: 0px;
+              .major{
+                display: block;
+                color:lighten(@gray-pleasing,30%);
+                font-size: 13px;
+                vertical-align: middle;
+                line-height: 13px;
+              }
+            }
+            .where{
+              //margin:0px;
+              //padding: 0px;
+              line-height: 15px;
+              //position: relative;
+              //display: block;
+            }
+            .read{
+
+              display: inline-block;
+              font-size: 8px;
+              padding:5px 10px 5px 10px;
+              color:white;
+              background: @myColor;
+              border-radius: 10px;
+              .clickable
+            }
+            .logo{
+              height:70px;
+              .center.vertical;
+              right:20px;
+              img{
+                height:60px;
+              }
+            }
+            @media (max-width: 450px) {
+              .logo{
+              display: none;
+            }
+            }
+          }
+          .skills {
+            width:100%;
+            border-radius: 2px;
+            margin-bottom:15px;
+            .BoxShadowHelper(1);
+            border-left:8px solid @myColor;
+            padding: 20px 30px 20px 30px;
+            .skill{
+              .name{
+                display: inline-block;
+                width:120px;
+                height:30px;
+                line-height: 15px;
+                vertical-align: middle;
+              }
+              .rank{
+                display: inline-block;
+                .dot{
+                  margin-top:5px;
+                  height:20px;
+                  width:20px;
+                  border-radius: 100%;
+                  border:1px solid fade(@gray-pleasing,20%);
+                  display: inline-block;
+                  &.active{
+                    background: @myColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .title{
+          width:100%;
+          background:white;
+          font-size: 20px;
+          padding:15px 30px 15px 30px;
+          color:lighten(@gray-pleasing,20%);
+          border-bottom: 1px solid fade(@gray-pleasing,20%);
+          //.BoxShadowHelper(1);
+        }
+        .subtitle{
+          padding:20px 20px 20px 20px;
+          font-size: 25px;
+          text-transform: uppercase;
+          //border-left:5px solid lighten(@gray-pleasing,20%);
+          //border-right:5px solid lighten(@gray-pleasing,20%);
+          //width:10px!important;
+          width:auto!important;
+          display: block;
+          position: relative;
+          i{
+            margin-right: 10px;
+          }
+        }
+  }
+}
+
+}

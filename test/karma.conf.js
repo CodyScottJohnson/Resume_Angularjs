@@ -32,6 +32,8 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/materialize/bin/materialize.js',
       'bower_components/angular-materialize/src/angular-materialize.js',
+      'bower_components/matchmedia/matchMedia.js',
+      'bower_components/ngSticky/lib/sticky.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

@@ -8,3 +8,19 @@ html,body{
   width: 100%;
   .scrollbar;
 }
+.modal_backdrop{
+  height:100%;
+  width:100%;
+  position: fixed;
+  display: block;
+  background: fade(@gray-pleasing,80%);
+  z-index:99;
+}
+.modal_box{
+  .center.both;
+  height: 80%;
+  width:60%;
+  .BoxShadowHelper(5);
+  background: white;
+  border-radius: 3px;
+}
