@@ -11,6 +11,7 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  var modRewrite = require('connect-modrewrite');
   var serveStatic = require('serve-static');
   grunt.loadNpmTasks('grunt-ssh-deploy');
   // Automatically load required Grunt tasks
@@ -115,22 +116,23 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
-          open: true,
-          middleware: function (connect) {
-            return [
-              serveStatic('.tmp'),
-              connect().use(
-                '/bower_components',
-                serveStatic('./bower_components')
-              ),
-              connect().use(
-                '/app/styles',
-                serveStatic('./app/styles')
-              ),
-              serveStatic(appConfig.app)
-            ];
-          }
-        }
+                open: true,
+                middleware: function (connect) {
+                  return [
+                    modRewrite(['^[^\\.]*$ /index.html [L]']),
+                    serveStatic('.tmp'),
+                    connect().use(
+                      '/bower_components',
+                      serveStatic('./bower_components')
+                    ),
+                    connect().use(
+                      '/app/styles',
+                      serveStatic('./app/styles')
+                    ),
+                    serveStatic(appConfig.app)
+                  ];
+                }
+              }
       },
       test: {
         options: {

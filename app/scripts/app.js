@@ -10,27 +10,44 @@
  */
 angular
   .module('Resume', [
+    'duScroll',
     'LocalStorageModule',
     'ngAnimate',
     'ngCookies',
     'sticky',
-    'ui.materialize',
+    'ui.bootstrap',
     'ui.router'
 
 
   ]);
 
 angular.module('Resume')
-.run(function($rootScope, $state, localStorageService) {
+.run(function($rootScope, $state,$document, localStorageService,$location,$stateParams,$anchorScroll,$timeout) {
+
   $rootScope.modals = [{url:"views/Modals/job.html"}];
+  $rootScope.$on('duScrollspy:becameActive', function($event, $element, $target){
+      //Automaticly update location
+      var hash = $element.prop('hash');
+      console.log($state);
+      if (hash) {
+        history.replaceState(null, null, $state.current.url+hash);
+      }
+    });
+    $rootScope.$on('duScrollspy:becameInactive', function($event, $element, $target){
+        //Automaticly update location
+
+          history.replaceState(null, null, $state.current.url);
+
+      });
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
     var requireLogin = toState.data.requireLogin;
   });
 
 });
-angular.module('Resume').config(function($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
+angular.module('Resume').config(function($stateProvider, $urlRouterProvider, localStorageServiceProvider,$locationProvider) {
   // configure Idle settings
   localStorageServiceProvider.setPrefix('App');
+  $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise("/");
   $stateProvider
   .state('app', {
@@ -50,8 +67,8 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider, loc
       }
     })
     .state('app.Resume', {
-      url: '/Resume',
-      templateUrl: 'views/Pages/Resume.html',
+      url: '/Splash',
+      templateUrl: 'views/Pages/Splash.html',
       data: {
         requireLogin: false
       }
