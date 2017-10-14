@@ -1,0 +1,96 @@
+@keyframes colorCycleText {
+    0% {
+        color: fade(#228ae6,100%);
+    }
+    12.5% {
+        color: fade(#12b886,100%)
+    }
+    25% {
+        color: fade(#40c057,100%)
+    }
+    37.5% {
+        color: fade(#ffd43b,100%)
+    }
+    50% {
+        color: fade(#fd7e14,100%)
+    }
+    62.5% {
+        color: fade(#fa5252,100%)
+    }
+    75% {
+        color: fade(#f783ac,100%)
+    }
+    87.5% {
+        color: fade(#7950f2,100%)
+    }
+    to {
+        color: fade(#228ae6,100%)
+    }
+}
+@keyframes colorCycleBackground {
+    0% {
+        background-color: fade(#228ae6,50%);
+    }
+    12.5% {
+        background-color: fade(#12b886,50%)
+    }
+    25% {
+        background-color: fade(#40c057,50%)
+    }
+    37.5% {
+        background-color: fade(#ffd43b,50%)
+    }
+    50% {
+        background-color: fade(#fd7e14,50%)
+    }
+    62.5% {
+        background-color: fade(#fa5252,50%)
+    }
+    75% {
+        background-color: fade(#f783ac,50%)
+    }
+    87.5% {
+        background-color: fade(#7950f2,50%)
+    }
+    to {
+        background-color: fade(#228ae6,50%)
+    }
+}
+@keyframes colorCycleBorder {
+    0% {
+        border-color: fade(#228ae6,100%);
+    }
+    12.5% {
+        border-color: fade(#12b886,100%)
+    }
+    25% {
+        border-color: fade(#40c057,100%)
+    }
+    37.5% {
+        border-color: fade(#ffd43b,100%)
+    }
+    50% {
+        border-color: fade(#fd7e14,100%)
+    }
+    62.5% {
+        border-color: fade(#fa5252,100%)
+    }
+    75% {
+        border-color: fade(#f783ac,100%)
+    }
+    87.5% {
+        border-color: fade(#7950f2,100%)
+    }
+    to {
+        border-color: fade(#228ae6,100%)
+    }
+}
+.colorCycle(@Type) {
+    animation-name: @Type;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}

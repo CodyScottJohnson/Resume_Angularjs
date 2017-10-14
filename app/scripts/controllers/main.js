@@ -9,6 +9,7 @@
  */
 angular.module('Resume')
   .controller('MainCtrl', function ($scope,$uibModal,$document) {
+    $scope.comingsoon={waiting:false};
     $scope.scrollTo = function(Element) {
     var someElement = angular.element(document.getElementById(Element));
     $document.scrollToElement(someElement, 0, 900);
@@ -58,6 +59,7 @@ angular.module('Resume')
       {name:"R",level:8},
       {name:"Python",level:5},
       {name:"Javascript",level:5},
+      {name:"Angularjs",level:5},
       {name:"CSS",level:8},
       {name:"HTML",level:8},
       {name:"PHP",level:7},

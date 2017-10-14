@@ -72,6 +72,12 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider, loc
       data: {
         requireLogin: false
       }
+    }).state('app.ComingSoon', {
+      url: '/ComingSoon',
+      templateUrl: 'views/Pages/ComingSoon.html',
+      data: {
+        requireLogin: false
+      }
     });
 
 });

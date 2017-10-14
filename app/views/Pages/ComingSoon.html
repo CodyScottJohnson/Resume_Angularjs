@@ -1,0 +1,33 @@
+<div class="ComingSoon">
+  <div class="box" ng-show="comingsoon.waited">
+    <div class="title">
+      Coming Soon
+    </div>
+    <div class="outer-outer" ng-show="comingsoon.waiting">
+      <div class="outer"><i class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i></div>
+    </div>
+
+    <div class="button_bar">
+      <div class="button">
+        Back To Home Page
+      </div>
+      <div class="button" ng-class="{loading:comingsoon.waiting}" ng-click="comingsoon.waiting=!comingsoon.waiting">
+        <span>I'll Wait</span>
+      </div>
+    </div>
+  </div>
+  <div class="box" ng-show="comingsoon.waited">
+      <div class="title">Coming <s>Soon</s></div>
+    <div class="button_bar">
+      <div class="button">
+        Back To Home Page
+      </div>
+      <div class="button" ng-class="{loading:comingsoon.waiting}" ng-click="comingsoon.waiting=!comingsoon.waiting">
+        <span>I'll Wait</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+
+  </div>
+</div>
