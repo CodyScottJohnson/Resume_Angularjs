@@ -1,0 +1,47 @@
+.overlay(@name:1, @fade: 100%) {
+  & when (@name = 'Mean_Fruit') {
+    background-image: linear-gradient(120deg, fade(#fccb90,@fade) 0%, fade(#d57eeb,@fade) 94%);
+  }
+
+  & when (@name = 'Smile') {
+    background-image: radial-gradient(circle 248px at center, fade(#16d9e3,@fade) 0%, fade(#30c7ec,@fade) 47%, fade(#46aef7,@fade) 100%);
+  }
+
+  & when (@name = 'Happy_Acid') {
+    background-image: linear-gradient(to top, fade(#37ecba,@fade) 0%, fade(#72afd3,@fade) 100%);
+  }
+
+  & when (@name = 'Strong_Bliss') {
+    background-image: linear-gradient(to right, fade(#f78ca0,@fade) 0%, fade(#f9748f,@fade) 19%, fade(#fd868c,@fade) 60%, fade(#fe9a8b,@fade) 100%);
+  }
+
+  & when (@name = 'Summer_Games') {
+    background-image: linear-gradient(to right, fade(#92fe9d,@fade) 0%, fade(#00c9ff,@fade) 100%);
+  }
+
+  & when (@name = 'Orange_Juice') {
+    background-image: linear-gradient(-20deg, fade(#fc6076,@fade) 0%, fade(#ff9a44,@fade) 100%);
+  }
+
+  & when (@name = 'Norse_Beauty') {
+    background-image: linear-gradient(to right, fade(#ec77ab,@fade) 0%, fade(#7873f5,@fade) 100%);
+  }
+
+  & when (@name = 'Happy_Unicorn') {
+    background-image: linear-gradient(to top, fade(#b3ffab,@fade) 0%, fade(#12fff7,@fade) 100%);
+  }
+
+  & when (@name = 'Glass_Water') {
+    background-image: linear-gradient(to top, fade(#dfe9f3,@fade) 0%, fade(white,@fade) 100%);
+  }
+
+  & when (@name = 'Above_Sky') {
+    background-image: linear-gradient(to top, fade(lightgrey,@fade) 0%, fade(lightgrey,@fade) 1%, fade(#e0e0e0,@fade) 26%, fade(#efefef,@fade) 48%, fade(#d9d9d9,@fade) 75%, fade(#bcbcbc,@fade) 100%);
+  }
+
+  & when (@name = 'Earl_Grey') {
+    background-color: fade(#E4E4E1,@fade);
+    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+ 	  background-blend-mode: normal, multiply;
+  }
+}

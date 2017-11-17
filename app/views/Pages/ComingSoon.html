@@ -1,33 +1,39 @@
 <div class="ComingSoon">
-  <div class="box" ng-show="comingsoon.waited">
-    <div class="title">
-      Coming Soon
+  <div class="box" >
+    <div class="title" ng-show="!comingsoon.waiting && !comingsoon.waited">
+      Coming <br />Soon
+      <div class="sub">
+        I'll be honest I haven't gotten to everything (or much) yet, maybe just check out my resume for now.
+      </div>
     </div>
+
     <div class="outer-outer" ng-show="comingsoon.waiting">
       <div class="outer"><i class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i></div>
     </div>
 
-    <div class="button_bar">
-      <div class="button">
-        Back To Home Page
+    <div class="button_bar" ng-show="!comingsoon.waited">
+      <div class="button" ui-sref="app.Main({'#':'resume'})">
+        View Resume
       </div>
-      <div class="button" ng-class="{loading:comingsoon.waiting}" ng-click="comingsoon.waiting=!comingsoon.waiting">
+      <div class="button" ng-class="{loading:comingsoon.waiting}" ng-click="comingsoon.wait()">
         <span>I'll Wait</span>
       </div>
     </div>
   </div>
   <div class="box" ng-show="comingsoon.waited">
-      <div class="title">Coming <s>Soon</s></div>
-    <div class="button_bar">
-      <div class="button">
-        Back To Home Page
+    <div class="title">
+      Coming <br /><span class="cross"><span class="normal">&nbsp Soon &nbsp</span></span>
+      <div class="sub">
+        Okay fine, maybe it's not coming soon, but it's coming, I promise.
       </div>
-      <div class="button" ng-class="{loading:comingsoon.waiting}" ng-click="comingsoon.waiting=!comingsoon.waiting">
+    </div>
+    <div class="button_bar">
+      <div class="button" ui-sref="app.Main({'#':'resume'})">
+        View Resume
+      </div>
+      <div class="button" ng-class="{loading:comingsoon.waiting}" ng-click="comingsoon.wait()">
         <span>I'll Wait</span>
       </div>
     </div>
-  </div>
-  <div class="footer">
-
   </div>
 </div>

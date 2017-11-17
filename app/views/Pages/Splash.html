@@ -1,18 +1,49 @@
-<div class="view splash">
-<div class="inner_splash">
-<div class="logo">
-  <img src="images/Logo.png"/>
-</div>
-<div class="view_resume" ng-click="scrollTo('resume')">
-  View Resume
-  <div class="button right">
-  <i class="fa fa-arrow-right"></i>
-</div>
-<div class="button down">
-<i class="fa fa-arrow-down"></i>
-</div>
-</div>
-<!--
+<div class="view splash" id="home">
+  <div class="inner_splash">
+    <div class="logo">
+      <img src="images/Logo.png" />
+      <div class="menu">
+        <ul>
+          <li ng-click="scrollTo('about')">About</li>
+          <li ng-click="scrollTo('projects')">Projects</li>
+          <li ui-sref="app.ComingSoon">Blog</li>
+          <li ng-click="scrollTo('resume')">Resume</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile_menu" ng-class="{'active':show_menu}">
+      <div class="icon" ng-click="show_menu = !show_menu">
+        <i class="fa fa-bars"></i>
+      </div>
+      <ul>
+        <li ng-click="scrollTo('about');show_menu = !show_menu">
+          <div class="menu_label"><i class="fa fa-id-card"></i></div>
+          About
+        </li>
+        <li ng-click="scrollTo('projects');show_menu = !show_menu">
+          <div class="menu_label"><i class="fa fa-tasks"></i></div>
+          Projects
+        </li>
+        <li ui-sref="app.ComingSoon">
+          <div class="menu_label"><i class="fa fa-book"></i></div>
+          Blog
+        </li>
+        <li ng-click="scrollTo('resume');show_menu = !show_menu">
+          <div class="menu_label"><i class="fa fa-file-text"></i></div>
+          Resume
+        </li>
+      </ul>
+    </div>
+    <div class="view_resume" >
+      View Resume
+      <div class="button right" ng-click="scrollTo('resume')">
+        <i class="fa fa-arrow-right"></i>
+      </div>
+      <div class="button down" ng-click="scrollTo('resume')">
+        <i class="fa fa-arrow-down"></i>
+      </div>
+    </div>
+    <!--
 <svg class="splash_circle" viewBox="0 0 265 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <desc>Created with Sketch.</desc>
     <defs>
@@ -27,7 +58,7 @@
 </svg>
 -->
 
-<svg class="splash_circle" viewBox="0 0 265 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="splash_circle" viewBox="0 0 265 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs>
@@ -91,14 +122,19 @@
         </g>
     </g>
 </svg>
-<div class="name">
-  <a href="#resume" du-Scrollspy></a>
-  Cody
-  <div class="subtitle">
-    Connecting Data and Business
+    <div class="name">
+      <a href="#resume" du-Scrollspy></a> Cody
+      <div class="subtitle">
+        Connecting Data and Business
+      </div>
+    </div>
   </div>
 </div>
+<div ng-include="'views/Pages/About.html'">
+
 </div>
+<div ng-include="'views/Projects/index.html'" >
+
 </div>
 <div id="resume" ng-include="'views/Pages/Resume.html'">
 

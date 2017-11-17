@@ -1,0 +1,35 @@
+.Blog_Page{
+  height:100%;
+  width:100%;
+  .Blog_Splash{
+    height:100%;
+    width:100%;
+    background: #89909F;
+    .Blog_Splash_Inner{
+      height:90%;
+      height: ~"calc(100% - 200px)";
+      width:~"calc(100% - 250px)";
+      padding:60px;
+      .center.both;
+
+      .img{
+        height:100%;
+        width:100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: blue;
+      }
+      .Title_Card{
+        height:100%;
+        width: 50%;
+        left:0;
+        top:0;
+        //padding-left: 100%;
+        position: absolute;
+        background: fade(@myColor,90%);
+
+      }
+    }
+  }
+}

@@ -27,6 +27,35 @@
         color: fade(#228ae6,100%)
     }
 }
+@keyframes colorCycleText2 {
+    0% {
+        color: #6F94FF
+    }
+    12.5% {
+        color: #71C1E2
+    }
+    25% {
+        color: #72D9D2
+    }
+    37.5% {
+        color: #6F94FF
+    }
+    50% {
+        color: #71C1E2
+    }
+    62.5% {
+        color:  #72D9D2
+    }
+    75% {
+        color: #6F94FF
+    }
+    87.5% {
+        color: #71C1E2
+    }
+    to {
+        color:  #72D9D2
+    }
+}
 @keyframes colorCycleBackground {
     0% {
         background-color: fade(#228ae6,50%);
@@ -93,4 +122,34 @@
     animation-iteration-count: infinite;
     animation-duration: 4s;
     animation-timing-function: linear;
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+  animation-duration: .5s;
+}
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+  animation-duration: .5s;
 }

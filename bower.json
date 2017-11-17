@@ -9,14 +9,12 @@
     "angular-sanitize": "^1.4.0",
     "font-awesome": "^4.6.3",
     "angular-ui-router": "^0.3.1",
-    "moment": "^2.13.0",
     "lodash": "^4.17.4",
     "hover": "Hover#^2.1.0",
-    "angular-filter": "^0.5.14",
-    "angular-local-storage": "^0.5.2",
     "ngSticky": "^1.8.13",
     "angular-bootstrap": "^2.5.0",
-    "angular-scroll": "^1.0.2"
+    "angular-scroll": "^1.0.2",
+    "angular-inview": "^2.3.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
@@ -28,6 +26,13 @@
       "main": [
         "less/bootstrap.less",
         "dist/css/bootstrap.css"
+      ]
+    },
+    "angular-bootstrap": {
+      "main": [
+        "ui-bootstrap-custom-2.5.0-csp.cs",
+        "ui-bootstrap-custom-2.5.0.js",
+        "ui-bootstrap-custom-tpls-2.5.0.js"
       ]
     },
     "font-awesome": {

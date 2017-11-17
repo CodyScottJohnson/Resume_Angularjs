@@ -11,4 +11,7 @@ angular.module('Resume')
   .controller('ModalCtrl', function ($scope,$uibModalInstance,items) {
     $scope.items=items;
     console.log(items);
+    $scope.CloseModal = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
   });

@@ -1,0 +1,63 @@
+<div class="Projects view" id="projects">
+  <div class="header" sticky sticky-class="stuck" >
+    <div class="title">
+      <span class="slash">&nbsp&nbsp&nbsp&nbsp</span> Projects <span class="slash">&nbsp&nbsp&nbsp&nbsp</span>
+    </div>
+    <div class="logo" ng-click="scrollTo('home')">
+      <img src="images/Logo.png" />
+    </div>
+  </div>
+  <div class="nav_bar">
+    <div class="search">
+      <i class="fa fa-search"></i>
+      <input placeholder="Search.." />
+    </div>
+    <div class="small_menu">
+      <div class="btn btn-default">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+    <div class="display_control">
+      <i class="fa fa-th"></i>
+      <i class="fa fa-th-list"></i>
+    </div>
+    <div class="buttons">
+      <div class="btn btn-default" ng-class="{selected:project_type != 'ongoing' && project_type != 'finished'}" ng-click="project_type = ''">
+        All
+      </div>
+      <div class="btn-group">
+        <div class="btn btn-default" ng-class="{selected:project_type == 'ongoing'}" ng-click="project_type = 'ongoing'">
+          Ongoing
+        </div>
+        <div class="btn btn-default" ng-class="{selected:project_type == 'finished'}" ng-click="project_type = 'finished'">
+          Finished
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project_list">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 project_container" ng-repeat="project in Projects">
+        <div class="project">
+
+          <div ui-sref="app.ComingSoon" class="image" style="background-image:url({{project.preview}})">
+
+          </div>
+          <div class="text" ui-sref="app.ComingSoon">
+            <h1 class="title">{{project.title}}</h1>
+            <div class="tags">
+              <div class="tag" ng-repeat="tag in project.tags">
+                {{tag}}
+              </div>
+            </div>
+          </div>
+          <div class="view">
+            <div class="btn btn-default" ui-sref="app.ComingSoon">
+              View Project
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

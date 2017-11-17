@@ -1,0 +1,281 @@
+.Projects {
+  min-height: 100%;
+
+  
+  .background-new(10%);
+
+  .nav_bar {
+    padding: 50px;
+    position: relative;
+    display: block;
+    @media (max-width: 834px) {
+      padding-right: 140px;
+    }
+
+    .small_menu {
+      .center.vertical;
+      right: 50px;
+      display: none;
+
+      .btn-default {
+        background: @myColor;
+        border: none;
+        color: white;
+        font-size: 25px;
+        padding: 10px 20px;
+        .BoxShadowHelperColor(3,@myColor);
+      }
+      @media (max-width: 834px) {
+        display: inline-block;
+      }
+    }
+
+    .search {
+      position: relative;
+      display: inline-block;
+      @media (max-width: 834px) {
+        width: 100%;
+      }
+
+      i {
+        .center.vertical;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+
+      input {
+        .BoxShadowHelperColor(3,@myColor);
+        font-size: 17px;
+        padding-left: 40px;
+        height: 55px;
+        width: 500px;
+        border: none;
+        border-radius: 5px;
+        @media (max-width: 1043px) {
+          width: 400px;
+        }
+        @media (max-width: 924px) {
+          width: 300px;
+        }
+        @media (max-width: 834px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .display_control {
+      display: inline-block;
+      margin-left: 30px;
+      height: 100%;
+      vertical-align: middle;
+      @media (max-width: 834px) {
+        display: none;
+      }
+
+      i {
+        font-size: 30px;
+        margin: 5px;
+        .clickable;
+      }
+    }
+
+    .buttons {
+      .center.vertical;
+      right: 50px;
+      @media (max-width: 834px) {
+        display: none;
+      }
+
+      .btn-default {
+        .Font_Body;
+        font-size: 15px;
+        background: none;
+        padding: 10px 25px;
+
+        &.selected {
+          background: @color-button;
+          color: @almost-white;
+          border-color: @color-button;
+          .BoxShadowHelperColor(3,@tech);
+        }
+      }
+
+      .btn-group {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .project_list {
+    padding: 10px 30px 10px 10px;
+    width: 100%;
+
+    .project_container {
+      &:nth-child(2n+0) {
+        .view {
+          .overlay(  'Smile',40%);
+        }
+
+        .tag {
+          .overlay(  'Smile',10%)!important;
+        }
+
+        &:hover {
+          .view {
+            .overlay(  'Smile',80%);
+          }
+        }
+      }
+
+      &:nth-child(3n+0) {
+        .view {
+          .overlay(  'Happy_Acid',40%);
+        }
+
+        .tag {
+          .overlay(  'Happy_Acid',10%)!important;
+        }
+
+        &:hover {
+          .view {
+            .overlay(  'Happy_Acid',80%);
+          }
+        }
+      }
+
+      &:nth-child(4n+0) {
+        .view {
+          .overlay(  'Orange_Juice',40%);
+        }
+
+        .tag {
+          .overlay(  'Orange_Juice',10%)!important;
+        }
+
+        &:hover {
+          .view {
+            .overlay(  'Orange_Juice',80%);
+          }
+        }
+      }
+
+      &:nth-child(5n+0) {
+        .view {
+          .overlay(  'Norse_Beauty',40%);
+        }
+
+        .tag {
+          .overlay(  'Norse_Beauty',10%)!important;
+        }
+
+        &:hover {
+          .view {
+            .overlay(  'Norse_Beauty',80%);
+          }
+        }
+      }
+
+      &:nth-child(6n+0) {
+        .view {
+          .overlay(  'Happy_Unicorn',40%);
+        }
+
+        .tag {
+          .overlay(  'Happy_Unicorn',10%)!important;
+        }
+
+        &:hover {
+          .view {
+            .overlay(  'Happy_Unicorn',80%);
+          }
+        }
+      }
+    }
+
+    .project {
+      .BoxShadowHelper(2);
+      height: 400px;
+      width: 100%;
+      display: block;
+      position: relative;
+      margin: 10px;
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      @media (max-width: 769px) {
+        height: 600px;
+        margin-bottom: 30px;
+      }
+
+      .text {
+        .scrollbar;
+        height: 40%;
+        padding: 5px 20px;
+
+        .title {
+          font-size: 25px;
+          font-weight: 900;
+          width: 100%;
+          text-align: center;
+        }
+
+        .tags {
+          width: 100%;
+          text-align: center;
+
+          .tag {
+            //background: @myColor;
+            //color:white;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px;
+            .BoxShadowHelperColor(1,@myColor);
+            .overlay(  'Mean_Fruit',10%);
+          }
+        }
+      }
+
+      .view {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        border-radius: 5px;
+        .overlay(  'Mean_Fruit',40%);
+
+        .btn-default {
+          .Font_Body;
+          .BoxShadowHelper(1);
+          .center.both;
+          .clickable;
+          background: fade(white,80%);
+          display: none;
+          border: none;
+          font-size: 20px;
+          padding: 10px 20px;
+        }
+      }
+
+      &:hover {
+        .view {
+          height: 100%;
+          .overlay(  'Mean_Fruit',80%);
+
+          .btn-default {
+            display: block;
+          }
+        }
+      }
+
+      .image {
+        height: 60%;
+        width: 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}

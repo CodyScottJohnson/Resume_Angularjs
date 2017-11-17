@@ -1,54 +1,91 @@
-.ComingSoon{
-  height:100%;
-  width:100%;
-  padding-bottom:100px;
+.ComingSoon {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 100px;
   .background(10%);
-  .box{
+
+  .box {
     .center.both;
   }
-  .outer-outer{
-    height:300px;
+  .title{
+    font-size: 100px;
+    line-height: 100px;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding:0;
+    text-align: center;
+    max-width:350px;
+    @media (max-width: @ps_sm) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    .cross{
+      color: @myColor;
+      text-decoration: line-through;
+    }
+    .normal{
+      color: #8F8F8F;
+
+    }
+    .sub{
+      font-size: 20px;
+      line-height: 20px;
+      width:100%;
+      padding-top:20px;
+      padding-bottom: 20px;
+      text-align: center;
+
+    }
+  }
+  .outer-outer {
+    height: 300px;
     width: 100%;
     display: block;
     position: relative;
-  .outer{
-    .center.both;
-    .colorCycle(colorCycleText);
-    display: inline-block;
-  i{
-    font-size: 200px;
-  }
-}
-}
-  .button_bar{
-    .button{
-      .background-new;
-      .BoxShadowHelper(1);
-      .clickable;
-      font-size:15px;
-      display: inline-block;
-      border-radius: 5px;
-      margin:5px;
-      padding:10px;
-      color:white;
-      &:nth-child(1){
-        background: @myColor;
-      }
-      &.loading{
-        border-bottom:4px solid;
-        line-height: 20px;
-        .colorCycle(colorCycleBorder);
 
+    .outer {
+      .center.both;
+      .colorCycle(colorCycleText2);
+      display: inline-block;
+
+      i {
+        font-size: 200px;
       }
     }
-
   }
-  .footer{
-    width:100%;
-    height:100px;
+
+  .button_bar {
+    text-align: center;
+    .button {
+      .background-other;
+      .BoxShadowHelper(1);
+      .clickable;
+      font-size: 15px;
+      display: inline-block;
+      border-radius: 15px;
+      margin: 5px;
+      padding: 20px;
+      color: white;
+
+      &:nth-child(1) {
+        //background: @myColor;
+      }
+
+      &.loading {
+        border-bottom: 4px solid;
+        line-height: 20px;
+        .colorCycle(colorCycleBorder);
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 100px;
     background: fade(white,50%);
     position: absolute;
-    bottom:0;
+    bottom: 0;
     border-top: 1px solid fade(@gray-pleasing,10%);
   }
 }

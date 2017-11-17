@@ -8,7 +8,7 @@ analytical reasoning and business decision making.
   </div>
 </div>
 <div class="card">
-  <div class="title">
+  <div class="title" id="resume-container">
     Background
   </div>
   <div class="subtitle">
@@ -40,6 +40,22 @@ analytical reasoning and business decision making.
 
       <div class="logo">
         <img src="/images/{{school.logo}}" />
+      </div>
+    </div>
+  </div>
+  <div class="subtitle">
+    <i class="fa fa-trophy"></i>Accomplishments
+  </div>
+  <div class="detail">
+    <div class="award" ng-repeat="award in awards" ng-click="OpenModal('views/Modals/accomplishment.html','lg',award)">
+
+        <span class="years">{{school.years}}</span><br />
+        <span class="job_title">{{award.what}}<span ng-show="school.majors" class="major">{{school.majors}}</span>
+      </span>
+        <span class="where">{{award.date}}</span><br />
+
+      <div class="logo">
+        <img src="/images/{{award.logo}}" />
       </div>
     </div>
   </div>

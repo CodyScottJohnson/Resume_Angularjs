@@ -10,8 +10,8 @@
  */
 angular
   .module('Resume', [
+    'angular-inview',
     'duScroll',
-    'LocalStorageModule',
     'ngAnimate',
     'ngCookies',
     'sticky',
@@ -22,33 +22,36 @@ angular
   ]);
 
 angular.module('Resume')
-.run(function($rootScope, $state,$document, localStorageService,$location,$stateParams,$anchorScroll,$timeout) {
+.run(function($rootScope, $state,$document,$location,$stateParams,$anchorScroll,$timeout) {
 
   $rootScope.modals = [{url:"views/Modals/job.html"}];
-  $rootScope.$on('duScrollspy:becameActive', function($event, $element, $target){
+  /*$rootScope.$on('duScrollspy:becameActive', function($event, $element, $target){
       //Automaticly update location
       var hash = $element.prop('hash');
       console.log($state);
       if (hash) {
-        history.replaceState(null, null, $state.current.url+hash);
+        //$state.go('app.Main',{"hash":"cody"});
+        $location.hash(hash.replace('#',''));
+        //history.replaceState(null, null, $state.current.url+hash);
       }
-    });
+    });*/
+    /*
     $rootScope.$on('duScrollspy:becameInactive', function($event, $element, $target){
         //Automaticly update location
-
+          //$location.hash();
           history.replaceState(null, null, $state.current.url);
 
       });
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
-    var requireLogin = toState.data.requireLogin;
-  });
+    console.log('State Change');
+    //var requireLogin = toState.data.requireLogin;
+  });*/
 
 });
-angular.module('Resume').config(function($stateProvider, $urlRouterProvider, localStorageServiceProvider,$locationProvider) {
+angular.module('Resume').config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   // configure Idle settings
-  localStorageServiceProvider.setPrefix('App');
   $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/404");
   $stateProvider
   .state('app', {
     url: '',
@@ -61,14 +64,14 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider, loc
   })
     .state('app.Main', {
       url: '/',
-      templateUrl: 'views/Pages/Resume.html',
+      templateUrl: 'views/Pages/Splash.html',
       data: {
         requireLogin: false
       }
     })
     .state('app.Resume', {
-      url: '/Splash',
-      templateUrl: 'views/Pages/Splash.html',
+      url: '/Resume',
+      templateUrl: 'views/Pages/Resume_Download.html',
       data: {
         requireLogin: false
       }
@@ -78,6 +81,23 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider, loc
       data: {
         requireLogin: false
       }
+    })
+    .state('app.Blog', {
+      url: '/Blog',
+      templateUrl: 'views/Blog/index.html'
+    })
+    .state('app.Projects', {
+      url: '/Projects',
+      templateUrl: 'views/Projects/index.html'
+    })
+    .state('app.Email', {
+      url: '/Email/:GUID',
+      controller: 'EmailCtrl',
+      templateUrl: 'views/Pages/Email.html'
+    })
+    .state('app.error', {
+      url: '/404',
+      templateUrl: 'views/Pages/404.html'
     });
 
 });

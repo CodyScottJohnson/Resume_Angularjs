@@ -8,3 +8,57 @@ html,body{
   width: 100%;
   .scrollbar;
 }
+.header {
+  .BoxShadowHelper(1);
+  transition: all 60s ease;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: white;
+  .title{
+    .center.both;
+    font-size:40px;
+    transition: all .5s ease;
+    .slash{
+      text-decoration: line-through;
+    }
+    @media (max-width: 515px) {
+      font-size:30px;
+    }
+    @media (max-width: 380px) {
+      font-size:30px;
+      .slash{
+        display: none;
+      }
+    }
+  }
+  .logo{
+    transition: all .5s linear;
+    display: none;
+  }
+  &.stuck {
+
+    //position: absolute;
+    z-index: 999!important;
+    .title{
+      visibility:hidden;
+      opacity: 0;
+      transform: translateX(450px)
+    }
+    .logo {
+      .clickable;
+      height: 100%;
+      padding: 5px 30px;
+      border-right: 1px solid fade(@gray-pleasing,20%);
+      width: 130px;
+      display: inline-block;
+      img {
+        height: 100%;
+      }
+    }
+    @media (max-width: 769px) {
+      height: 60px;
+    }
+  }
+}

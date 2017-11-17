@@ -1,14 +1,13 @@
-<div class="job_detail">
+<div class="award_detail">
   <div class="modal-header">
     <div class="logo">
       <img src="images/{{items.logo}}" />
     </div>
-    {{items.title}}
+    {{items.what}}
     <button type="button" class="close" aria-hidden="true" ng-click="CloseModal()" style="font-size:20pt;vertical-align:middle;margin:10px;">&times;</button>
-
   </div>
   <div class="modal-body">
-
+    <img class="screencap" src="images/{{items.screencap}}" />
     <div class="bullets">
       <div class="bullet" ng-repeat="bullet in items.detail.bullets">
         <div class="circle"></div>{{bullet}}
