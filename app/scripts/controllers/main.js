@@ -57,8 +57,19 @@ angular.module('Resume')
       });
 
     };
-    $scope.jobs = [{
-        years: "2013-Present",
+    $scope.jobs = [
+      {
+        years: "2018-Present",
+        title: "Technology Product Development",
+        company: "Walt Disney Studios",
+        logo: "disney.png",
+        detail: {
+          bullets: [
+          ]
+        }
+      },
+      {
+        years: "2013-2018",
         title: "Curriculum Data Analyst",
         company: "Imagine Learning",
         logo: "imaginelearning.png",
