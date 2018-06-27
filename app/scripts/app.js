@@ -75,6 +75,12 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider,$loc
       data: {
         requireLogin: false
       }
+    }).state('app.ResumePreview', {
+      url: '/Resume/Preview',
+      templateUrl: 'views/Pages/Resume_Preview.html',
+      data: {
+        requireLogin: false
+      }
     }).state('app.ComingSoon', {
       url: '/ComingSoon',
       templateUrl: 'views/Pages/ComingSoon.html',
@@ -94,6 +100,10 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider,$loc
       url: '/Email/:GUID',
       controller: 'EmailCtrl',
       templateUrl: 'views/Pages/Email.html'
+    })
+    .state('app.Project', {
+      url: '/Project',
+      templateUrl: 'views/Projects/project.html'
     })
     .state('app.error', {
       url: '/404',

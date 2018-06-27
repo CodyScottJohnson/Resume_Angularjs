@@ -1,0 +1,30 @@
+<div class="Projects">
+  <div class="nav_bar">
+    <div class="search">
+      <i class="fa fa-search"></i>
+      <input placeholder="Search.." />
+    </div>
+    
+    </div>
+  <div class="project_list">
+    <div class="row">
+      <div class="col-sm-12 project_container" ng-repeat="project in Projects">
+        <div class="project">
+
+          <div ui-sref="app.ComingSoon" class="image" style="background-image:url({{project.preview}})">
+
+          </div>
+          <div class="text" ui-sref="app.ComingSoon">
+            <h1 class="title">{{project.title}}</h1>
+          
+          </div>
+          <div class="view">
+            <div class="btn btn-default" ui-sref="app.ComingSoon">
+              View Project
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

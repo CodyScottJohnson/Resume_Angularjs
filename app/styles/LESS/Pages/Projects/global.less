@@ -1,281 +1,432 @@
 .Projects {
-  min-height: 100%;
-
-  
-  .background-new(10%);
-
-  .nav_bar {
-    padding: 50px;
-    position: relative;
-    display: block;
-    @media (max-width: 834px) {
-      padding-right: 140px;
-    }
-
-    .small_menu {
-      .center.vertical;
-      right: 50px;
-      display: none;
-
-      .btn-default {
-        background: @myColor;
-        border: none;
-        color: white;
-        font-size: 25px;
-        padding: 10px 20px;
-        .BoxShadowHelperColor(3,@myColor);
-      }
-      @media (max-width: 834px) {
-        display: inline-block;
-      }
-    }
-
-    .search {
-      position: relative;
-      display: inline-block;
-      @media (max-width: 834px) {
-        width: 100%;
-      }
-
-      i {
-        .center.vertical;
-        margin-left: 10px;
-        font-size: 20px;
-      }
-
-      input {
-        .BoxShadowHelperColor(3,@myColor);
-        font-size: 17px;
-        padding-left: 40px;
-        height: 55px;
-        width: 500px;
-        border: none;
-        border-radius: 5px;
-        @media (max-width: 1043px) {
-          width: 400px;
-        }
-        @media (max-width: 924px) {
-          width: 300px;
-        }
+    min-height: 100%;
+    .background-new(10%);
+    .nav_bar {
+        padding: 50px;
+        position: relative;
+        display: block;
         @media (max-width: 834px) {
-          width: 100%;
+            padding-right: 140px;
         }
-      }
-    }
-
-    .display_control {
-      display: inline-block;
-      margin-left: 30px;
-      height: 100%;
-      vertical-align: middle;
-      @media (max-width: 834px) {
-        display: none;
-      }
-
-      i {
-        font-size: 30px;
-        margin: 5px;
-        .clickable;
-      }
-    }
-
-    .buttons {
-      .center.vertical;
-      right: 50px;
-      @media (max-width: 834px) {
-        display: none;
-      }
-
-      .btn-default {
-        .Font_Body;
-        font-size: 15px;
-        background: none;
-        padding: 10px 25px;
-
-        &.selected {
-          background: @color-button;
-          color: @almost-white;
-          border-color: @color-button;
-          .BoxShadowHelperColor(3,@tech);
+        .small_menu {
+            .center.vertical;
+            right: 50px;
+            display: none;
+            .btn-default {
+                background: @myColor;
+                border: none;
+                color: white;
+                font-size: 25px;
+                padding: 10px 20px;
+                .BoxShadowHelperColor(3, @myColor);
+            }
+            @media (max-width: 834px) {
+                display: inline-block;
+            }
         }
-      }
-
-      .btn-group {
-        margin-left: 10px;
-      }
-    }
-  }
-
-  .project_list {
-    padding: 10px 30px 10px 10px;
-    width: 100%;
-
-    .project_container {
-      &:nth-child(2n+0) {
-        .view {
-          .overlay(  'Smile',40%);
-        }
-
-        .tag {
-          .overlay(  'Smile',10%)!important;
-        }
-
-        &:hover {
-          .view {
-            .overlay(  'Smile',80%);
-          }
-        }
-      }
-
-      &:nth-child(3n+0) {
-        .view {
-          .overlay(  'Happy_Acid',40%);
-        }
-
-        .tag {
-          .overlay(  'Happy_Acid',10%)!important;
-        }
-
-        &:hover {
-          .view {
-            .overlay(  'Happy_Acid',80%);
-          }
-        }
-      }
-
-      &:nth-child(4n+0) {
-        .view {
-          .overlay(  'Orange_Juice',40%);
-        }
-
-        .tag {
-          .overlay(  'Orange_Juice',10%)!important;
-        }
-
-        &:hover {
-          .view {
-            .overlay(  'Orange_Juice',80%);
-          }
-        }
-      }
-
-      &:nth-child(5n+0) {
-        .view {
-          .overlay(  'Norse_Beauty',40%);
-        }
-
-        .tag {
-          .overlay(  'Norse_Beauty',10%)!important;
-        }
-
-        &:hover {
-          .view {
-            .overlay(  'Norse_Beauty',80%);
-          }
-        }
-      }
-
-      &:nth-child(6n+0) {
-        .view {
-          .overlay(  'Happy_Unicorn',40%);
-        }
-
-        .tag {
-          .overlay(  'Happy_Unicorn',10%)!important;
-        }
-
-        &:hover {
-          .view {
-            .overlay(  'Happy_Unicorn',80%);
-          }
-        }
-      }
-    }
-
-    .project {
-      .BoxShadowHelper(2);
-      height: 400px;
-      width: 100%;
-      display: block;
-      position: relative;
-      margin: 10px;
-      background: white;
-      border-radius: 5px;
-      overflow: hidden;
-      @media (max-width: 769px) {
-        height: 600px;
-        margin-bottom: 30px;
-      }
-
-      .text {
-        .scrollbar;
-        height: 40%;
-        padding: 5px 20px;
-
-        .title {
-          font-size: 25px;
-          font-weight: 900;
-          width: 100%;
-          text-align: center;
-        }
-
-        .tags {
-          width: 100%;
-          text-align: center;
-
-          .tag {
-            //background: @myColor;
-            //color:white;
+        .search {
+            position: relative;
             display: inline-block;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 5px;
-            .BoxShadowHelperColor(1,@myColor);
-            .overlay(  'Mean_Fruit',10%);
-          }
+            @media (max-width: 834px) {
+                width: 100%;
+            }
+            i {
+                .center.vertical;
+                margin-left: 10px;
+                font-size: 20px;
+            }
+            input {
+                .BoxShadowHelperColor(3, @myColor);
+                font-size: 17px;
+                padding-left: 40px;
+                height: 55px;
+                width: 500px;
+                border: none;
+                border-radius: 5px;
+                @media (max-width: 1043px) {
+                    width: 400px;
+                }
+                @media (max-width: 924px) {
+                    width: 300px;
+                }
+                @media (max-width: 834px) {
+                    width: 100%;
+                }
+            }
         }
-      }
-
-      .view {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 60%;
-        width: 100%;
-        border-radius: 5px;
-        .overlay(  'Mean_Fruit',40%);
-
-        .btn-default {
-          .Font_Body;
-          .BoxShadowHelper(1);
-          .center.both;
-          .clickable;
-          background: fade(white,80%);
-          display: none;
-          border: none;
-          font-size: 20px;
-          padding: 10px 20px;
+        .display_control {
+            display: inline-block;
+            margin-left: 30px;
+            height: 100%;
+            vertical-align: middle;
+            @media (max-width: 834px) {
+                display: none;
+            }
+            i {
+                font-size: 30px;
+                margin: 5px;
+                .clickable;
+            }
         }
-      }
-
-      &:hover {
-        .view {
-          height: 100%;
-          .overlay(  'Mean_Fruit',80%);
-
-          .btn-default {
-            display: block;
-          }
+        .buttons {
+            .center.vertical;
+            right: 50px;
+            @media (max-width: 834px) {
+                display: none;
+            }
+            .btn-default {
+                .Font_Body;
+                font-size: 15px;
+                background: none;
+                padding: 10px 25px;
+                &.selected {
+                    background: @color-button;
+                    color: @almost-white;
+                    border-color: @color-button;
+                    .BoxShadowHelperColor(3, @tech);
+                }
+            }
+            .btn-group {
+                margin-left: 10px;
+            }
         }
-      }
-
-      .image {
-        height: 60%;
-        width: 100%;
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
     }
-  }
+    .project_list {
+        padding: 10px 30px 10px 10px;
+        width: 100%;
+        .project_container {
+            &:nth-child(2n+0) {
+                .view {
+                    .overlay( 'Smile', 40%);
+                }
+                .tag {
+                    .overlay( 'Smile', 10%) !important;
+                }
+                &:hover {
+                    .view {
+                        .overlay( 'Smile', 80%);
+                    }
+                }
+            }
+            &:nth-child(3n+0) {
+                .view {
+                    .overlay( 'Happy_Acid', 40%);
+                }
+                .tag {
+                    .overlay( 'Happy_Acid', 10%) !important;
+                }
+                &:hover {
+                    .view {
+                        .overlay( 'Happy_Acid', 80%);
+                    }
+                }
+            }
+            &:nth-child(4n+0) {
+                .view {
+                    .overlay( 'Orange_Juice', 40%);
+                }
+                .tag {
+                    .overlay( 'Orange_Juice', 10%) !important;
+                }
+                &:hover {
+                    .view {
+                        .overlay( 'Orange_Juice', 80%);
+                    }
+                }
+            }
+            &:nth-child(5n+0) {
+                .view {
+                    .overlay( 'Norse_Beauty', 40%);
+                }
+                .tag {
+                    .overlay( 'Norse_Beauty', 10%) !important;
+                }
+                &:hover {
+                    .view {
+                        .overlay( 'Norse_Beauty', 80%);
+                    }
+                }
+            }
+            &:nth-child(6n+0) {
+                .view {
+                    .overlay( 'Happy_Unicorn', 40%);
+                }
+                .tag {
+                    .overlay( 'Happy_Unicorn', 10%) !important;
+                }
+                &:hover {
+                    .view {
+                        .overlay( 'Happy_Unicorn', 80%);
+                    }
+                }
+            }
+        }
+        .project {
+            .BoxShadowHelper(2);
+            height: 400px;
+            width: 100%;
+            display: block;
+            position: relative;
+            margin: 10px;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            @media (max-width: 769px) {
+                height: 600px;
+                margin-bottom: 30px;
+            }
+            .text {
+                .scrollbar;
+                height: 40%;
+                padding: 5px 20px;
+                .title {
+                    font-size: 25px;
+                    font-weight: 900;
+                    width: 100%;
+                    text-align: center;
+                }
+                .tags {
+                    width: 100%;
+                    text-align: center;
+                    .tag {
+                        //background: @myColor;
+                        //color:white;
+                        display: inline-block;
+                        padding: 10px;
+                        border-radius: 5px;
+                        margin: 5px;
+                        .BoxShadowHelperColor(1, @myColor);
+                        .overlay( 'Mean_Fruit', 10%);
+                    }
+                }
+            }
+            .view {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 60%;
+                width: 100%;
+                border-radius: 5px;
+                .overlay( 'Mean_Fruit', 40%);
+                .btn-default {
+                    .Font_Body;
+                    .BoxShadowHelper(1);
+                    .center.both;
+                    .clickable;
+                    background: fade(white, 80%);
+                    display: none;
+                    border: none;
+                    font-size: 20px;
+                    padding: 10px 20px;
+                }
+            }
+            &:hover {
+                .view {
+                    height: 100%;
+                    .overlay( 'Mean_Fruit', 80%);
+                    .btn-default {
+                        display: block;
+                    }
+                }
+            }
+            .image {
+                height: 60%;
+                width: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.project_page {
+    height: 100%;
+    width: 100%;
+    padding: 0px 75px 0px 75px;
+    overflow: hidden;
+    .side_nav {
+        .DirectionalBoxShadowHelper();
+        position: absolute;
+        height: 100%;
+        width: 75px;
+        padding: 10px;
+        left: 0;
+        background: white;
+        display: inline-block;
+        z-index: 21;
+        text-align: center;
+        .logo {
+            width: 100%;
+        }
+        i {
+            .clickable;
+            .TextShadowHelper(1);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            font-size: 30px;
+            color: @myColor;
+        }
+    }
+    .sub_nav {
+        z-index: 20;
+        position: absolute;
+        width: 300px;
+        .BoxShadowHelper(4);
+        background: white;
+        height: 100%;
+        .Projects {
+            .scrollbar;
+            height: 100%;
+            min-height: 0px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background: white;
+            .project_list {
+                padding: 10px;
+                .project {
+                    margin-left: 0px;
+                    @media (max-width: 769px) {
+                        height: 400px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .nav_bar {
+                padding: 10px;
+                .search {
+                    width: 100%;
+                    padding: 20px 20px 10px 20px;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        overflow-y: scroll;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 15px 10px 50px 10px;
+    }
+    .header_box {
+      box-shadow: none;
+      margin:0px;
+      
+      position:relative;
+      display: block;
+      width: 100%;
+      .fixed_title{
+        opacity: 0;
+        position:absolute;
+        overflow: hidden;
+        text-align: center;
+        background:white;
+        height:1px;
+        width:1px;
+        bottom:50px;
+        -webkit-transition: height 1s; /* Safari */
+        transition: height 1s;
+        &.stuck_card{
+          opacity: 1;
+          .BoxShadowHelper(1);
+          display:block;
+          height:80px!important;
+          width:100%!important;
+          position:fixed;
+          top:0px;
+          left:0px;
+          right:0px;
+          bottom:auto;
+          .inner {
+            .center.both;
+            font-size: 25px;
+            color: @gray-pleasing;
+        }
+          
+        }
+      };
+      .title_image{
+        position:absolute;
+        background: url('https://jfsapp.com/Images/JobSearch/Projects/8m_cover.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:100%;
+        width:60%;
+        min-width:600px;
+      
+      }
+        .title_card {
+            .BoxShadowHelper(5);
+            .center.vertical;
+            width: 60%;
+            min-width: 400px;
+            right: 0px;
+            margin-left: auto; //max-width:400px;
+            height: 400px;
+            padding: 20px;
+            background: white;
+            text-align: center;
+            font-size: 30px;
+            color: @gray-pleasing;
+          
+  
+            .inner {
+                .center.both;
+            }
+            .author {
+                .Font_Body;
+                font-size: 12px;
+            }
+          }
+        
+    };
+    .page_title {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+    .underline {
+        height: 1px;
+        width: 50%;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        background-color: @myColor;
+    }
+    @media (max-width: 630px) {
+        padding: 0px 5px 0px 5px;
+        .side_nav {
+            display: none;
+        }
+        .title_card {
+            right:auto!important;
+            .center.both!important;
+            @media (max-width: 430px) {
+                min-width: 0px;
+                width: 100%;
+            }
+        }
+        .title_image{
+          width:100%;
+          min-width:0px;
+        }
+    }
+}
+
+.mobile_menu.subpage {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    right: 10px;
+    top: 10px;
+    i {
+        font-size: 40px;
+    }
 }

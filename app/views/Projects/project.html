@@ -1,0 +1,64 @@
+<div class="view">
+  <div class="mobile_menu subpage" ng-class="{'active':show_menu}">
+    <div class="icon" ng-click="show_menu = !show_menu">
+      <i class="fa fa-bars"></i>
+    </div>
+    <ul>
+      <li ng-click="scrollTo('about');show_menu = !show_menu">
+        <div class="menu_label">
+          <i class="fa fa-id-card"></i>
+        </div>
+        About
+      </li>
+      <li ng-click="scrollTo('projects');show_menu = !show_menu">
+        <div class="menu_label">
+          <i class="fa fa-tasks"></i>
+        </div>
+        Projects
+      </li>
+      <li ui-sref="app.ComingSoon">
+        <div class="menu_label">
+          <i class="fa fa-book"></i>
+        </div>
+        Blog
+      </li>
+      <li ng-click="scrollTo('resume');show_menu = !show_menu">
+        <div class="menu_label">
+          <i class="fa fa-file-text"></i>
+        </div>
+        Resume
+      </li>
+    </ul>
+  </div>
+  <div class="project_page">
+    <div class="side_nav">
+      <img class="logo" src="images/Logo.png" />
+      <i class="fa fa-th-large" ng-click="subnav = !subnav"></i>
+
+    </div>
+    <div ng-show="subnav" class="sub_nav" ng-include="'views/Projects/projectlist.html'"></div>
+
+    <sticky-scroll class="content">
+      <div class="page_title">Projects</div>
+      <div class="underline"></div>
+      <div class="header_box" resize style="height:{{windowHeight - 90.0}}px">
+        <div class="title_image">
+
+        </div>
+        <div class="title_card" >
+          <div class="inner">
+            <span class="author">Cody Johnson</span>
+            <br> YouTube 8M Challenge
+          </div>
+        
+        </div>
+        <div class="fixed_title" use-placeholder="false" sticky sticky-class="stuck_card">
+                <div class="inner">
+                     YouTube 8M Challenge
+                      </div>
+        </div>
+      </div>
+      <div style="width:100%;height:50000px"></div>
+    </sticky-scroll>
+  </div>
+</div>

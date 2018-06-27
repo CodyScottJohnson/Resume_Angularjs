@@ -2,18 +2,7 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109871574-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-109871574-1');
-  </script>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
@@ -34,12 +23,32 @@
 </head>
 
 <body ng-app="Resume">
+  <!-- BEGIN: Pre-Bootstrap Loading Screen. -->
+<div ng-if="false">
 
+    <p>
+        Loading...
+    </p>
+
+</div>
+<!-- END: Pre-Bootstrap Loading Screen. -->
   <div class="mainView" ui-view resize style="width:100%;height:{{windowHeight}}px;">
   </div>
 
   <!--<div ng-view style="display:inline-block;position:relative;top:60px;left:250px;min-width:90%" ng-class="{reposition: (SideBarVis == one)}"></div>-->
   </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109871574-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+  
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-109871574-1');
+    </script>
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
@@ -51,8 +60,7 @@
   <script src="bower_components/lodash/lodash.js"></script>
   <script src="bower_components/matchmedia/matchMedia.js"></script>
   <script src="bower_components/ngSticky/lib/sticky.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-custom-2.5.0.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-custom-tpls-2.5.0.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/angular-scroll/angular-scroll.js"></script>
   <script src="bower_components/angular-inview/angular-inview.js"></script>
   <!-- endbower -->
@@ -66,6 +74,7 @@
   <script src="scripts/controllers/modal.js"></script>
   <script src="scripts/directives/scroll.js"></script>
   <script src="scripts/controllers/email.js"></script>
+  <script src="scripts/controllers/resume.js"></script>
   <!-- endbuild -->
 </body>
 

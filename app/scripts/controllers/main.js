@@ -8,51 +8,51 @@
  * Controller of the jfsApp
  */
 angular.module('Resume')
-  .controller('MainCtrl', function($scope, $uibModal, $document, $timeout, $location) {
-    $timeout(function() {
-      if(angular.isDefined(location.hash)&&location.hash!= ''){
-      $scope.scrollTo(location.hash.replace("#", ""));
-    }
+  .controller('MainCtrl', function ($scope, $uibModal, $document, $timeout, $location) {
+    $timeout(function () {
+      if (angular.isDefined(location.hash) && location.hash != '') {
+        $scope.scrollTo(location.hash.replace("#", ""));
+      }
     }, 100);
     $scope.comingsoon = {
       waiting: false
     };
-    $scope.SetScroll = function(position){
+    $scope.SetScroll = function (position) {
       console.log('position');
     };
-    $scope.comingsoon.wait = function() {
+    $scope.comingsoon.wait = function () {
       $scope.comingsoon.waited = false;
       $scope.comingsoon.waiting = true;
-      $timeout(function() {
+      $timeout(function () {
         $scope.comingsoon.waiting = false;
         $scope.comingsoon.waited = true;
       }, 4000);
     };
     //$scope.addHash
-    $scope.scrollTo = function(Element) {
+    $scope.scrollTo = function (Element) {
       console.log(Element);
       $location.hash(Element);
       var someElement = angular.element(document.getElementById(Element));
       $document.scrollToElement(someElement, 0, 900);
     };
 
-    $scope.OpenModal = function(modalname, size, data, options) {
+    $scope.OpenModal = function (modalname, size, data, options) {
       var default_options = {
         animation: true,
         templateUrl: modalname,
         controller: 'ModalCtrl',
         size: size,
         resolve: {
-          items: function() {
+          items: function () {
             return data;
           }
         }
       };
       default_options = _.assign(default_options, options);
       var modalInstance = $uibModal.open(default_options);
-      modalInstance.result.then(function(selectedItem) {
+      modalInstance.result.then(function (selectedItem) {
         //console.log(selectedItem);
-      }, function() {
+      }, function () {
         console.log('done');
       });
 
@@ -64,8 +64,7 @@ angular.module('Resume')
         company: "Walt Disney Studios",
         logo: "disney.png",
         detail: {
-          bullets: [
-          ]
+          bullets: []
         }
       },
       {
@@ -131,15 +130,29 @@ angular.module('Resume')
       },
     ];
     $scope.awards = [{
-        date: "2017",
-        what: "Finalist Adobe Analytics Challenge",
-        logo: "Adobe2.png",
-        screencap:"AAC.png",
-        summary:""
-      }
-    ];
-
-    $scope.skills = [{
+      date: "2017",
+      what: "Finalist Adobe Analytics Challenge",
+      logo: "Adobe2.png",
+      screencap: "AAC.png",
+      summary: ""
+    },
+    {
+      date: "2018",
+      what: "MBSA President",
+      logo: "uofu.png",
+      screencap: "",
+      summary: ""
+    },
+    {
+      date: "2018",
+      what: "Strategy And Consulting Club Vice President",
+      logo: "uofu.png",
+      screencap: "",
+      summary: ""
+    },
+  ];
+    $scope.skills = [
+      {
         name: "SQL",
         level: 9
       },
@@ -206,31 +219,40 @@ angular.module('Resume')
     ];
     $scope.Projects = [
       {
-        title:"Johnson Financial Public Site",
-        preview:'https://jfsapp.com/Images/JobSearch/Projects/JFS_Public_Home_Preview.jpg',
-        tags:['Angularjs','HTML','CSS','Sketch']
+        title: "YouTube 8m Challenge",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/8m.jpg',
+        tags: ['TensorFlow', 'Python', 'unix'],
+        state: 'ongoing'
       },
       {
-        title:"Recruiting Management App",
-        preview:'https://jfsapp.com/Images/JobSearch/Projects/JFS_Admin_Home_Preview.jpg',
-        tags:['PHP','SQL','Angularjs','HTML','CSS']
+        title: "Super Bowl Tweet Analytics Challenge",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/SuperBowl.jpg',
+        tags: ['Python', 'R', 'MongoDB', 'Sentiment Analysis'],
+        state: 'finished'
       },
       {
-        title:"Backend Redesign",
-        preview:'https://jfsapp.com/Images/JobSearch/Projects/GoQL.jpg',
-        tags:['Golang', 'GraphQL']
+        title: "Backend Redesign",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/GoQL.jpg',
+        tags: ['Golang', 'GraphQL'],
+        state: 'ongoing'
       },
       {
-        preview:'https://jfsapp.com/Images/JobSearch/Projects/JFS_Public_Home_Preview.jpg',
-        tags:['PHP','Angularjs','HTML','CSS']
+        title: "Johnson Financial Public Site",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/JFS_Public_Home_Preview.jpg',
+        tags: ['Angularjs', 'HTML', 'CSS', 'Sketch'],
+        state: 'finished'
       },
       {
-        preview:'https://jfsapp.com/Images/JobSearch/Projects/JFS_Public_Home_Preview.jpg',
-        tags:['PHP','Angularjs','HTML','CSS']
+        title: "Recruiting Management App",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/JFS_Admin_Home_Preview.jpg',
+        tags: ['PHP', 'SQL', 'Angularjs', 'HTML', 'CSS'],
+        state: 'finished'
       },
       {
-        preview:'https://jfsapp.com/Images/JobSearch/Projects/JFS_Public_Home_Preview.jpg',
-        tags:['PHP','Angularjs','HTML','CSS']
+        title: "MBSA Allumni Database",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/mbsa1.jpg',
+        tags: ['Go', 'Angular', 'Firebase'],
+        state: 'finished'
       },
     ];
   });

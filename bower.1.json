@@ -2,11 +2,11 @@
   "name": "Resume",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "~1.6.10",
+    "angular": "^1.4.0",
     "bootstrap": "^3.3.7",
-    "angular-animate": "~1.6.0",
-    "angular-cookies": "~1.6.0",
-    "angular-sanitize": "~1.6.0",
+    "angular-animate": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-sanitize": "^1.4.0",
     "font-awesome": "^4.6.3",
     "angular-ui-router": "^0.3.1",
     "lodash": "^4.17.4",
@@ -17,7 +17,7 @@
     "angular-inview": "^2.3.0"
   },
   "devDependencies": {
-    "angular-mocks": "*1.6.0"
+    "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
   "moduleName": "Resume",
@@ -28,7 +28,13 @@
         "dist/css/bootstrap.css"
       ]
     },
-
+    "angular-bootstrap": {
+      "main": [
+        "ui-bootstrap-custom-2.5.0-csp.cs",
+        "ui-bootstrap-custom-2.5.0.js",
+        "ui-bootstrap-custom-tpls-2.5.0.js"
+      ]
+    },
     "font-awesome": {
       "main": [
         "css/font-awesome.css"
