@@ -5,7 +5,7 @@
     width: 100%;
     .BoxShadowHelperUp(1);
     padding: 20px 30px 20px 100px;
-    border-bottom: 1px solid fade(@gray-pleasing,30%);
+    border-bottom: 1px solid fade(@gray-pleasing,10%);
     font-size: 40px;
     color: @myColor;
     //background: green;
@@ -57,7 +57,7 @@
   height: 100%;
   display: block;
   position: relative;
-  padding: 0 10px 0 130px;
+  padding: 0 10px 0 100px;
   @media (max-width: 800px) {
     padding: 0 10px 0 100px;
   }
@@ -65,12 +65,12 @@
     padding: 0 10px 0 80px;
   }
   .menu_bar {
-    .DirectionalBoxShadowHelper( 'right');
+    .DirectionalBoxShadowHelper('right');
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    width: 130px;
+    width: 100px;
     padding: 0px;
     font-size: 40px;
     color: @myColor;
@@ -91,7 +91,7 @@
       padding: 20px 20px;
       height:130px;
       max-height: 20%;
-      border-bottom: 1px solid @gray;
+      border-bottom: 1px solid fade(@gray-pleasing,20%);
       text-align: center;
       .logo{
         max-width: calc(100% - 20px);
@@ -106,8 +106,7 @@
       text-align: center;
       height:130px;
       max-height: 20%;
-      border-bottom: 1px solid @gray;
-      vertical-align: middle;
+      border-bottom: 1px solid fade(@gray-pleasing,20%);
       font-size: 16px;
       i{
         font-size: 40px;
