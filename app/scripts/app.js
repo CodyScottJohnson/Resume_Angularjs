@@ -99,7 +99,41 @@ angular.module('Resume').config(function($stateProvider, $urlRouterProvider,$loc
     .state('app.Email', {
       url: '/Email/:GUID',
       controller: 'EmailCtrl',
+      resolve: {
+        email: function($stateParams,$http,$sce,$state){
+          return $http({
+            method: 'GET',
+            url: 'https://jfsapp.com/Open/API/Email/Preview/'+$stateParams.GUID+'/',
+        }).then(function(data) {
+          var page = $sce.trustAsHtml(data.data);
+          return page;
+        }, function(error) {
+
+            $state.go('app.error');
+            return error
+        });
+        }
+      },
       templateUrl: 'views/Pages/Email.html'
+    })
+    .state('app.EmailPreview', {
+      url: '/Email/Preview/:GUID',
+      controller: 'EmailCtrl',
+      resolve: {
+        email: function($stateParams,$http,$sce,$state){
+          return $http({
+            method: 'GET',
+            url: 'https://jfsapp.com/Open/API/Email/Preview/'+$stateParams.GUID+'/',
+        }).then(function(data) {
+          var page = $sce.trustAsHtml(data.data);
+          return page;
+        }, function(error) {
+            $state.go('app.error');
+            return error
+        });
+        }
+      },
+      templateUrl: 'views/Pages/Email_Extended.html'
     })
     .state('app.Project', {
       url: '/Project',
