@@ -60,11 +60,25 @@ angular.module('Resume')
     $scope.jobs = [
       {
         years: "2018-Present",
+        title: "Product Marketing Strategy & Analytics",
+        company: "Pluralsight",
+        logo: "pluralsight.png",
+        detail: {
+          bullets: ["•	Helped unite product management and marketing efforts - identifying key levers and interdependencies impacting the customer journey.",
+          "Drove collaboration with data team to identify a cohesive customer journey and increase customer retention and acquisition."
+        
+        ]
+        }
+      },
+      {
+        years: "2018-2018",
         title: "Technology Product Development",
         company: "Walt Disney Studios",
         logo: "disney.png",
         detail: {
-          bullets: []
+          bullets: ["Developed and championed Go-To-Market strategy to position internal software and tooling as industry standard.",
+           "Synthesized insights from internal/external users, developers, and stake holders to develop a product roadmap."
+        ]
         }
       },
       {
