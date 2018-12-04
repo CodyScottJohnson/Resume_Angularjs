@@ -30,3 +30,9 @@
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
+<div style="width:100%;display:block;position:relative">
+<p align="center">
+    <img src="https://raw.githubusercontent.com/codyscottjohnson/Resume_Angularjs/master/preview/Desktop.png" width="650px" style="width:650px;min-width:650px;max-width:650px"/>
+     <img src="https://raw.githubusercontent.com/codyscottjohnson/Resume_Angularjs/master/preview/Preview.gif" style="position:absolute;width:380px;top: 62px;  left: 50%;transform: translat(-50%, 0);-webkit-transform: translate(-50%, 0);;"/>
+</p>
+</div>
