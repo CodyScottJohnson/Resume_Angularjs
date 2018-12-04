@@ -2,4 +2,52 @@
   <div ui-view resize style="width:100%;height:{{windowHeight}}px;padding-top:0px overflow-x:hidden">
 
   </div>
+  <div class="loading_screen" ng-show="loading">
+    <div class="app-loading">
+      <div class="logo"></div>
+      <svg class="spinner" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+      </svg>
+      <svg width="153px" height="153px" viewBox="0 0 265 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+                <stop stop-color="#6F94FF" offset="0%"></stop>
+                <stop stop-color="#72D9D2" offset="100%"></stop>
+            </linearGradient>
+            <circle id="path-2" cx="132.5" cy="132.5" r="132.5"></circle>
+            <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
+                <stop stop-color="#FFC75E" offset="0%"></stop>
+                <stop stop-color="#F03DA2" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="53.5736644%" y1="72.4612728%" x2="50%" y2="0%" id="linearGradient-5">
+                <stop stop-color="#6F94FF" stop-opacity="0.526805933" offset="0%"></stop>
+                <stop stop-color="#1F171C" stop-opacity="0" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="100%" y1="44.1634994%" x2="0%" y2="50%" id="linearGradient-6">
+                <stop stop-color="#646EEB" offset="0%"></stop>
+                <stop stop-color="#9DECE1" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="55.968243%" y1="69.794306%" x2="61.8146189%" y2="-39.6026886%" id="linearGradient-7">
+                <stop stop-color="#6F94FF" stop-opacity="0.412392437" offset="0%"></stop>
+                <stop stop-color="#1F171C" stop-opacity="0" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Logo_Simp">
+                <circle id="Oval" fill="url(#linearGradient-1)" cx="132.5" cy="132.5" r="132.5"></circle>
+                <g id="Lineage-+-Main-Mask-+-Mask-Right-+-Lineage-+-Main-Mask-+-Right-Mask-+-Left-Mask-+-Pink-+-Blue-Mask">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <path d="M-10,194.460774 C17.6747485,194.928745 13.5235363,147.195682 36.1245809,147.195682 C58.7256255,147.195682 49.5007094,171.062214 82.2491618,171.530185 C114.997614,171.998156 103.466469,123.797121 128.373743,123.797121 C153.281016,123.797121 154.664754,77 174.498324,77 C194.331893,77 186.029469,100.398561 220.622904,100.866532 C255.21634,101.334503 240.91772,147.663653 266.28624,147.663653 C266.28624,175.741926 266.28624,204.290103 266.28624,204.290103 L-10,204.290103 L-10,195.851702" id="Lineage" fill-opacity="0.8" fill="url(#linearGradient-4)" style="mix-blend-mode: lighten;" mask="url(#mask-3)"></path>
+                    <path d="M-10,194.460774 C17.6747485,194.928745 13.5235363,147.195682 36.1245809,147.195682 C58.7256255,147.195682 49.5007094,171.062214 82.2491618,171.530185 C114.997614,171.998156 103.466469,123.797121 128.373743,123.797121 C153.281016,123.797121 154.664754,77 174.498324,77 C194.331893,77 186.029469,100.398561 220.622904,100.866532 C255.21634,101.334503 240.91772,147.663653 266.28624,147.663653 C266.28624,175.741926 266.28624,204.290103 266.28624,204.290103 L-10,204.290103 L-10,195.851702" id="Main-Mask" fill="url(#linearGradient-5)" mask="url(#mask-3)"></path>
+                    <path d="M-11,148.265092 C12.0622904,148.265092 15.2910111,101 35.5858267,101 C55.8806423,101 54.0356591,124.866532 81.7104076,124.866532 C109.385156,124.866532 106.617681,148.265092 127.373743,148.265092 C148.129804,148.265092 159.199704,124.398561 173.959569,124.398561 C188.719435,124.398561 192.870648,147.797121 219.622904,147.797121 C246.375161,147.797121 236.688999,195.062214 266.208731,195.062214 C266.208731,204.421638 266.208731,204.889609 266.208731,204.889609 L-10.5387542,204.889609 L-10.5387542,149.669006" id="Lineage" fill="url(#linearGradient-6)" style="mix-blend-mode: lighten;" mask="url(#mask-3)"></path>
+                    <path d="M-11,148.265092 C12.0622904,148.265092 15.2910111,101 35.5858267,101 C55.8806423,101 54.0356591,124.866532 81.7104076,124.866532 C109.385156,124.866532 106.617681,148.265092 127.373743,148.265092 C148.129804,148.265092 159.199704,124.398561 173.959569,124.398561 C188.719435,124.398561 192.870648,147.797121 219.622904,147.797121 C246.375161,147.797121 236.688999,195.062214 266.208731,195.062214 C266.208731,204.421638 266.208731,204.889609 266.208731,204.889609 L-10.5387542,204.889609 L-10.5387542,149.669006" id="Main-Mask" fill="url(#linearGradient-7)" mask="url(#mask-3)"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+    </div>
+  </div>
 <!--<div ng-view style="display:inline-block;position:relative;top:60px;left:250px;min-width:90%" ng-class="{reposition: (SideBarVis == one)}"></div>-->

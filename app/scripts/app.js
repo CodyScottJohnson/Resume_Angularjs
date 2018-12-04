@@ -16,7 +16,8 @@ angular
     'ngCookies',
     'sticky',
     'ui.bootstrap',
-    'ui.router'
+    'ui.router',
+    'ngFileSaver'
 
 
   ]);

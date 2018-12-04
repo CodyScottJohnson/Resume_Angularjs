@@ -1,27 +1,30 @@
 <div class="Email">
     <div class="preview_header">
-          
-        </div>
+
+    </div>
     <div class="preview_box">
-            <div class="title">
-                    Ben Havey
-                    <br />
-                    <span>The Void Follow Up</span>
-                </div>
-        <button id="split-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+        <div class="title">
+            {{emailMeta.To_Name}}
+            <br />
+            <span>{{emailMeta.Subject}}</span>
+        </div>
+        <div class="buttons">
+        <button id="split-button" type="button" class="btn btn-primary  email-btn" ng-click="downloadPreview()">
             Download <i class="fa fa-cloud-download"></i>
         </button>
         <div class="btn-group" uib-dropdown>
-            <button id="split-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+            <button id="split-button" type="button" class="btn btn-primary  email-btn" uib-dropdown-toggle>
                 Forward <i class="fa fa-mail-forward"></i>
             </button>
 
             <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-                <li role="menuitem"><a href="#">HTML</a></li>
-                <li role="menuitem"><a href="mailto:?subject=Test">Plain Text</a></li>
+                <li role="menuitem"><a ng-click="OpenModal('views/Modals/sendEmail.html','lg',{meta:emailMeta,page:page})">HTML</a></li>
+                <li role="menuitem"><a href="mailto:?subject={{urlEncode(emailMeta.Subject)}}&Body={{urlEncode(emailMeta.Alt_Body)}}">Plain Text</a></li>
             </ul>
         </div>
-        <iframe srcdoc="{{page}}" class="preview_email">
-        </iframe>
+        </div>
+        <div class="reset preview_email" ng-bind-html="page"></div>
+        <!--<iframe srcdoc="{{page}}" class="preview_email">
+        </iframe>-->
     </div>
 </div>

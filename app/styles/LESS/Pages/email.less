@@ -1,28 +1,35 @@
-.Email{
-    height:100%;
-    width:100%;
-    .preview_box{
+.Email {
+    height: 100%;
+    width: 100%;
+    background: lighten(@gray-pleasing, 70%);
+    overflow: scroll;
+    .preview_box {
         position: relative;
         display: box;
-        margin-left:auto;
-        margin-right:auto;
-        max-width:600px;
-        width:100%;
-        height:100%;
-        padding-top:80px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        padding: 80px 0px 300px 0px;
+        z-index: 2;
     }
-    .title{
+    .title {
         font-weight: 400;
-        color:fade(white,80%);
-        position:absolute;
+        color: fade(@gray-pleasing, 80%);
+        position: absolute;
         text-align: left;
-        top:20px;
-        left:0;
-        span{
-          color:white;
-          font-size: 26px;
+        top: 20px;
+        left: 0;
+        span {
+            color: @gray-pleasing;
+            font-size: 26px;
         }
-      }
+       // @media (max-width: 603px) {
+            width:100%;
+            text-align: center;
+         // }
+    }
     .preview_header {
         top: 0px;
         left: 0px;
@@ -30,21 +37,119 @@
         position: fixed;
         height: 192px;
         width: 100%;
-        background:#49A6D0;//lighten(@gray-pleasing,40%);
-        z-index: -1;
-        
-    } 
-
-    .preview_email{
-        .scrollbar!important;
-        .BoxShadowHelper(2);
-        margin-top:10px;
+        background: white; //lighten(@gray-pleasing,40%);
+        z-index: 1;
+    }
+    .preview_email {
+        //.scrollbar!important;
+        .BoxShadowHelper(4);
+        margin-top: 10px;
         display: block;
-        margin-left:auto;
-        margin-right:auto;
-        height:100%;
-        width:100%;
-        overflow-x:hidden;
-        border:none;
-    }  
+        margin-left: auto;
+        margin-right: auto; //height:100%;
+        width: 100%; //min-height:800px;
+        overflow-x: hidden;
+        border: none;
+        margin-bottom: 30px;
+        .weblink,
+        .hide_preview {
+            display: none !important;
+        }
+    }
+    .email-btn {
+        .Font_Body;
+        font-size:15px;
+        background: none;
+        border: 1px solid @myColor;
+        color: @myColor;
+        border-radius: 3px;
+        &.dropdown-toggle:active, .open .dropdown-toggle {
+            background: @myColor !important;
+            border-color: white;
+        }
+       
+    }
+    .open .dropdown-toggle {
+        background: @myColor !important;
+        border-color: white!important;
+    }
+    .buttons{
+        //@media (max-width: 603px) {
+            display: block;
+            margin-left:auto;
+            margin-right:auto;
+            width:216px;
+          //}
+    }
+}
+
+.send_email {
+    .modal-header {
+        font-size: 22px !important;
+        padding: 5px;
+        .logo {
+            display: inline-block;
+            height: 50px;
+            padding: 5px;
+            i {
+                color: @myColor;
+            }
+        }
+    }
+    .modal-body {
+        padding: 0px; //padding-top: 120px;
+        overflow: scroll;
+        max-height: 100%;
+    }
+    .send {
+        .BoxShadowHelper(1);
+        .Font_Body;
+        font-weight: bolder;
+        font-size: 20px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid fade(@gray-pleasing, 20%);
+        border-radius: none;
+    }
+    .info {
+        //position: absolute;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        top: 0px; //background: blue;
+        border-bottom: 1px solid fade(@gray-pleasing, 20%);
+        padding: 5px 10px 5px 10px;
+        .form-group {
+        
+            label {
+                font-weight: bolder;
+                color: darken(@myColor, 20%);
+                font-size: 18px;
+            }
+            input {
+                font-size:16px;
+                border: none;
+                max-width:200px;
+                box-shadow: none;
+                border-radius:0!important;
+                border-bottom:1px solid fade(@gray-pleasing,30%);
+                padding:0px 5px 0px 5px;
+                vertical-align: middle;
+
+                margin-bottom:10px;
+                &:focus{
+                    border-bottom:1px solid @myColor;
+                }
+            }
+            .from {
+                display: inline-block;
+                background: fade(@myColor, 50%);
+                color: @gray-pleasing;
+                margin-left: 10px;
+                padding: 5px;
+                border-radius: 3px;
+                font-size:16px;
+            }
+        }
+    }
 }

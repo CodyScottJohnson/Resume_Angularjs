@@ -8,12 +8,13 @@
  * Controller of the jfsApp
  */
 angular.module('Resume')
-  .controller('MainCtrl', function ($scope, $uibModal, $document, $timeout, $location) {
+  .controller('MainCtrl', function ($rootScope,$scope, $uibModal, $document, $timeout, $location) {
     $timeout(function () {
       if (angular.isDefined(location.hash) && location.hash != '') {
         $scope.scrollTo(location.hash.replace("#", ""));
       }
     }, 100);
+    $rootScope.loading = false;
     $scope.comingsoon = {
       waiting: false
     };
@@ -28,6 +29,10 @@ angular.module('Resume')
         $scope.comingsoon.waited = true;
       }, 4000);
     };
+    $scope.toggleLoading = function(){
+      console.log("loading");
+      $rootScope.loading = !$rootScope.loading
+    }
     //$scope.addHash
     $scope.scrollTo = function (Element) {
       console.log(Element);
@@ -269,4 +274,5 @@ angular.module('Resume')
         state: 'finished'
       },
     ];
+    
   });

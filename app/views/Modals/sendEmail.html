@@ -1,0 +1,28 @@
+<div class="send_email">
+    <div class="modal-header">
+        <div class="logo">
+            <i class="fa fa-envelope"></i>
+        </div>
+        Send Email
+        <button type="button" class="close" aria-hidden="true" ng-click="CloseModal()" style="font-size:20pt;vertical-align:middle;margin:10px;">&times;</button>
+    </div>
+    <div class="modal-body">
+        <div class="info">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="To">To</label><br>
+                    <input ng-model="items.meta.SendTo" type="text" class="form-control" aria-label="to">
+
+                    <br>
+                    <label for="Subject">Subject</label><br>
+                    <input ng-model="items.meta.Subject" type="text" class="form-control" id="Subject" placeholder="subject" aria-label="subject">
+                    <br>
+                    <label for="Subject">From</label>
+                    <div class="from">Me@codyscottjohnson.com</div>
+                </div>
+            </form>
+        </div>
+        <button class="btn btn-default send" ng-click="SendEmail(items);CloseModal()">Send</button>
+        <div class="reset" ng-bind-html="items.page"></div>
+    </div>
+</div>
