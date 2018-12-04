@@ -1,54 +1,32 @@
-# JFS Agent Portal
+<h1 align="center">
+  <br>
+  <a href="https://codyscottjohnson.com"><img src="https://codyscottjohnson.com/images/Logo.png" alt="Markdownify" width="200"></a>
+  <br>
+  Cody Johnson
+  <br>
+</h1>
 
-This is the management portal for the Johnson Financial Service Website
-## Built With
-<p>
-<img style="height:50px;width:50px; display:inline-block" src='http://devicon.fr/devicon.git/icons/nodejs/nodejs-original.svg'>
-<img style="height:50px;width:50px; display:inline-block" src='http://devicon.fr/devicon.git/icons/bower/bower-line.svg'>
-<img style="height:50px;width:50px" src='http://devicon.fr/devicon.git/icons/grunt/grunt-line.svg'>
-<img style="height:50px;width:50px" src='http://devicon.fr/devicon.git/icons/html5/html5-plain.svg'>
-<img style="height:50px;width:50px" src='http://devicon.fr/devicon.git/icons/css3/css3-plain.svg'>
-<img style="height:50px;width:50px" src='http://devicon.fr/devicon.git/icons/bootstrap/bootstrap-plain.svg'>
-<img style="height:50px;width:50px" src='http://devicon.fr/devicon.git/icons/angularjs/angularjs-plain.svg'>
-<img style="height:50px;width:50px" src='http://devicon.fr/devicon.git/icons/less/less-plain-wordmark.svg'>
-<img style="height:50px" src='https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Yeoman.svg/543px-Yeoman.svg.png'>
+<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+
+<p align="center">
+  <a href="https://badge.fury.io/js/electron-markdownify">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://saythanks.io/to/amitmerchant1990">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://www.paypal.me/AmitMerchant">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+  </a>
 </p>
-## Build & development
-#### requirements
 
-#### Initial Setup
-Download the repository and from the main directory run
-
-```
-npm install
-bower install
-```
-#### using yeoman
-
-If you have [`yeoman`](https://yeoman.io/) installed, you can use yeoman to generate new templates, the projector is set up using [yo angular generator](https://github.com/yeoman/generator-angular)
-so to add a new controller you could simply call
-
-```
-yo angular:controller myController
-
-```
-
-which will create the controller, set up test and inject the controller into you index.html
-
-#### LESS
-
-The Project is set up to use <img style="height:30px;width:30px" src='http://devicon.fr/devicon.git/icons/less/less-plain-wordmark.svg'/>. The main less file is `/app/style/app.less` which is compiled to `/app/style/app.css` as part of the grunt process.
-
-#### Building and Testing
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
-
-## Also
-
-This is a test
-
-ssh -i /Users/Cody/devApps/Keys/JFS.pem cody@jfsapp.com -p 4969
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
