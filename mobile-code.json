@@ -1,2 +1,9 @@
 {
+  "background":{
+    "type":"html",
+    "url":"https://ide.code.com",
+    "action": {
+      "trigger":"navigate"
+    }
+  }
 }
