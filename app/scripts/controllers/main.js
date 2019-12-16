@@ -64,6 +64,18 @@ angular.module('Resume')
     };
     $scope.jobs = [
       {
+        years: "2019-Present",
+        title: "ITS & BI ",
+        company: "Dropbox",
+        logo: "dropbox.png",
+        detail: {
+          bullets: ["•	Helped unite product management and marketing efforts - identifying key levers and interdependencies impacting the customer journey.",
+          "Drove collaboration with data team to identify a cohesive customer journey and increase customer retention and acquisition."
+        
+        ]
+        }
+      },
+      {
         years: "2018-Present",
         title: "Product Marketing Strategy & Analytics",
         company: "Pluralsight",
@@ -77,12 +89,24 @@ angular.module('Resume')
       },
       {
         years: "2018-2018",
-        title: "Technology Product Development",
+        title: "Product Manager - Studio Technology",
         company: "Walt Disney Studios",
         logo: "disney.png",
         detail: {
           bullets: ["Developed and championed Go-To-Market strategy to position internal software and tooling as industry standard.",
            "Synthesized insights from internal/external users, developers, and stake holders to develop a product roadmap."
+        ]
+        }
+      },
+      {
+        years: "2019",
+        title: "Product Manager | Project Consultant",
+        company: "Homie",
+        logo: "homie.png",
+        detail: {
+          bullets: ["Conducting analysis on customer interactions and building roadmap to iterate on customer experience.",
+           "Analyzing product and market data to improve competitive positioning and product messaging.",
+           "Working with cross-functional teams to design, build, and deliver software automation tool and make recommendations to Homie’s executive team."
         ]
         }
       },
@@ -157,15 +181,29 @@ angular.module('Resume')
     },
     {
       date: "2018",
-      what: "MBSA President",
+      what: "Finalist McGill International Portfolio Challenge",
+      logo: "mcgill.png",
+      screencap: "",
+      summary: ""
+    },
+    {
+      date: "2018",
+      what: "MBSA - President",
       logo: "uofu.png",
       screencap: "",
       summary: ""
     },
     {
       date: "2018",
-      what: "Strategy And Consulting Club Vice President",
-      logo: "uofu.png",
+      what: "Product Manager | Co-founder - Product Management Association",
+      logo: "PMA.png",
+      screencap: "",
+      summary: "The University of Utah Product Management Association is a student-run organization at the University of Utah designed to help the full-time MBA students navigate their way into a product management focused career. UofUPMA provides students with opportunities to network with experienced product managers, while providing student opportunities for project/consulting/internship work for the state's top technology organizations. We help students learn where and how to build relationships with local professionals, coordinate company site visits, host professional interviews and panels, and teach skill-building workshops."
+    },
+    {
+      date: "2018",
+      what: "Director | Co-founder - Utah MBA Consulting Group",
+      logo: "Consulting.jpeg",
       screencap: "",
       summary: ""
     },
@@ -271,6 +309,18 @@ angular.module('Resume')
         title: "MBSA Allumni Database",
         preview: 'https://jfsapp.com/Images/JobSearch/Projects/mbsa1.jpg',
         tags: ['Go', 'Angular', 'Firebase'],
+        state: 'finished'
+      },
+      {
+        title: "Am I Sam",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/AmISam.png',
+        tags: ['R', 'Facial Recognition', 'Python', 'Tensor Flow','Deep Learning'],
+        state: 'finished'
+      },
+      {
+        title: "Product Management Association",
+        preview: 'https://jfsapp.com/Images/JobSearch/Projects/PMA.png',
+        tags: ['Go', 'Angular', 'Sketch','Product Management'],
         state: 'finished'
       },
     ];
