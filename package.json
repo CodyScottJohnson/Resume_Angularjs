@@ -48,6 +48,7 @@
     "time-grunt": "^1.4.0"
   },
   "devDependencies": {
+    "bower": "^1.8.14",
     "connect-modrewrite": "^0.10.1"
   }
 }
