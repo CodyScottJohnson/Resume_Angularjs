@@ -3,10 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "author": "Cody Johnson <cody@anpac.net>",
+  "scripts": {
+    "install": "bower install",
+    "serve": "grunt serve -env=prod",
+    "build": "grunt build -env=prod"
+  },
   "dependencies": {
     "autoprefixer-core": "^6.0.1",
     "generator-angular": "^0.16.0",
     "generator-karma": "^2.0.0",
+    "gifsicle": "^7.0.1",
     "grunt": "^1.0.1",
     "grunt-angular-templates": "^1.1.0",
     "grunt-concurrent": "^2.3.1",
@@ -32,6 +38,10 @@
     "grunt-svgmin": "^4.0.0",
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^3.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "jit-grunt": "^0.10.0",
     "jshint-stylish": "^2.2.1",
     "serve-static": "^1.12.3",
